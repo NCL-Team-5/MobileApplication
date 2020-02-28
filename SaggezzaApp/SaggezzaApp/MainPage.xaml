@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SaggezzaApp.MainPage">
+
+
+    <!--<StackLayout 
+        BackgroundColor="#FFFFFFFF"
+        Padding="0">
+        
+        
+        <FlexLayout
+            BackgroundColor="#FFFFFFFF"
+            Padding="0"
+            VerticalOptions="End">
+            <Grid
+                Padding="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height = "Auto"/>
+                    <RowDefinition Height = "103"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid
+                    Grid.Row="5"
+                    Grid.Column="0">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height = "20.6"/>
+                        <RowDefinition Height = "20.6"/>
+                        <RowDefinition Height = "20.6"/>
+                        <RowDefinition Height = "20.6"/>
+                        <RowDefinition Height = "20.6"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="77"/>
+                        <ColumnDefinition Width="77"/>
+                        <ColumnDefinition Width="77"/>
+                        <ColumnDefinition Width="77"/>
+                        <ColumnDefinition Width="77"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image
+                        HorizontalOptions="Fill"
+                        Aspect="AspectFill"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="5"
+                        Grid.RowSpan="5"
+                        Margin="0"
+                        Source="NavBar.png"/>
+
+                    <Button
+                        BorderColor="Transparent"
+                        BackgroundColor="Transparent"
+                        WidthRequest="77"
+                        HeightRequest="20.6"
+                        Grid.Row="1"
+                        Grid.RowSpan="4"
+                        Grid.Column="0"/>
+
+                    <Button
+                        BorderColor="Transparent"
+                        BackgroundColor="Transparent"
+                        WidthRequest="77"
+                        HeightRequest="20.6"
+                        Grid.Row="1"
+                        Grid.RowSpan="4"
+                        Grid.Column="1"/>
+
+                    <Button
+                        BorderColor="Transparent"
+                        BackgroundColor="Transparent"
+                        WidthRequest="77"
+                        HeightRequest="20.6"
+                        Grid.Row="0"
+                        Grid.RowSpan="4"
+                        Grid.Column="2"/>
+
+                    <Button
+                        BorderColor="Transparent"
+                        BackgroundColor="Transparent"
+                        WidthRequest="77"
+                        HeightRequest="20.6"
+                        Grid.Row="1"
+                        Grid.RowSpan="4"
+                        Grid.Column="3"/>
+
+                    <Button
+                        BorderColor="Transparent"
+                        BackgroundColor="Transparent"
+                        WidthRequest="77"
+                        HeightRequest="20.6"
+                        Grid.Row="1"
+                        Grid.RowSpan="4"
+                        Grid.Column="4"/>
+                </Grid>
+            </Grid>
+        </FlexLayout>!-->
+        
+        <!--<Grid 
+        Padding="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height = "20"/>
+                <RowDefinition Height = "*"/>
+                <RowDefinition Height = "*"/>
+                <RowDefinition Height = "*"/>
+                <RowDefinition Height = "*"/>
+                <RowDefinition Height = "*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="10"/>
+            </Grid.ColumnDefinitions>
+
+            <Image
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                Aspect="AspectFill"
+                Grid.Column="0"
+                Grid.Row="0"
+                Grid.RowSpan="6"
+                Grid.ColumnSpan="5"
+                Source="SaggezzaGreen.png"/>
+
+            <Image
+            Source="logo_saggezza.png"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="Start"
+            Grid.Column="1"
+            Grid.ColumnSpan="3"
+            Grid.Row="1"/>
+
+            <Label 
+            Text="SAGGEZZA" 
+            FontFamily="DINNextLTPro#400" 
+            FontSize="18" 
+            FontAttributes="None" 
+            TextColor="#FF000000"
+            Grid.Row="2"
+            Grid.Column="2"
+            HorizontalOptions="Center"
+            VerticalOptions="Start"/>
+
+            <Label 
+            Text="Sign In With" 
+            FontFamily="DINNextLTPro#400" 
+            FontSize="18" 
+            FontAttributes="None" 
+            TextColor="#FF000000"
+            Grid.Row="3"
+            Grid.Column="2"
+            HorizontalOptions="Center"/>
+
+        </Grid>
+    </StackLayout>!-->
+</ContentPage>

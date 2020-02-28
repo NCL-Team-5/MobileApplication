@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SaggezzaApp.HomePage">
+    <ContentPage.Content>
+        <FlexLayout>
+            <FlexLayout>
+            <Grid
+            Padding="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height = "20"/>
+                    <RowDefinition Height = "50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="5"/>
+                </Grid.ColumnDefinitions>
+                <Image
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                Aspect="AspectFill"
+                Grid.Column="0"
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Grid.ColumnSpan="5"
+                Source="SaggezzaGreen.png"/>
+                <Image
+                HorizontalOptions="Start"
+                AnchorX="5"
+                Grid.Row="1"
+                Grid.Column="1"
+                Source="logo_saggezza.png"/>
+                <Image
+                HorizontalOptions="End"
+                Grid.Row="1"
+                Grid.Column="3"
+                Source="VectorCog.png"/>
+                <Label
+                HorizontalOptions="Center"
+                Grid.Column="2"
+                Grid.Row="1"
+                Text="Home"
+                FontFamily="DINNextLTPro#400"
+                FontSize="25"
+                FontAttributes="None"
+                TextColor="#FFFFFFFF"/>
+            </Grid>
+            </FlexLayout>
+
+            <!--WELCOME JOHN-->
+            <Label
+     Text="Welcome John..."
+     FontFamily="DINNextLTPro#400"
+     FontSize="24"
+     FontAttributes="None"
+     TextColor="#FF000000" />
+
+            <!--Notifications box-->
+            <Frame
+     WidthRequest="315"
+     HeightRequest="200"
+     HasShadow="true"
+     CornerRadius="10">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height = "30"/>
+                        <RowDefinition Height = "45"/>
+                        <RowDefinition Height = "20"/>
+                        <RowDefinition Height = "40"/>
+                        <RowDefinition Height = "20"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="300"/>
+                    </Grid.ColumnDefinitions>
+                    <Image
+                 Grid.Column="0"
+                 Grid.Row="0"
+                 Source="notiIcon.png"/>
+                    <Label
+                 Grid.Column="1"
+                 Grid.Row="0"
+                Text="Notifications"
+                FontFamily="DINNextLTPro#400"
+                FontSize="20"
+                FontAttributes="None"
+                TextColor="#FF000000" />
+                    <Image
+                 Grid.Column="1"
+                 Grid.Row="1"
+                 Source="Vector.png"/>
+                    <Image
+                 Grid.Column="0"
+                 Grid.Row="2"
+                 Source="SpeakerPhone.png"/>
+                    <Label
+                 Grid.Column="1"
+                 Grid.Row="2"
+                 Text="Your receipt #00167 has been approved by Richard"
+                 FontFamily="DINNextLTPro#400"
+                 FontSize="12"
+                 FontAttributes="None"
+                 TextColor="#FF000000" />
+                    <Image
+                 Grid.Column="0"
+                 Grid.Row="4"
+                 Source="Declined.png"/>
+                    <Label
+                 Grid.Row="4"
+                 Grid.Column="1"
+                 Text="Your receipt #00166 has been declined by Samuel"
+                 FontFamily="DINNextLTPro#400"
+                 FontSize="12"
+                 FontAttributes="None"
+                 TextColor="#FF000000" />
+                </Grid>
+
+            </Frame>
+            <Frame
+    WidthRequest="315"
+    HeightRequest="200"
+    HasShadow="true"
+    BackgroundColor="#FFFFFFFF">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height = "30"/>
+                        <RowDefinition Height = "45"/>
+                        <RowDefinition Height = "20"/>
+                        <RowDefinition Height = "40"/>
+                        <RowDefinition Height = "20"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="300"/>
+                    </Grid.ColumnDefinitions>
+                    <Image
+                 Grid.Column="0"
+                 Grid.Row="0"
+                 Source="Pending.png"/>
+                    <Label
+                 Grid.Column="1"
+                 Grid.Row="0"
+                Text="Pending Reciepts"
+                FontFamily="DINNextLTPro#400"
+                FontSize="20"
+                FontAttributes="None"
+                TextColor="#FF000000" />
+                    <Image
+                 Grid.Column="1"
+                 Grid.Row="1"
+                 Source="Vector.png"/>
+                    <Image
+                 Grid.Column="0"
+                 Grid.Row="2"
+                 Source="SpeakerPhone.png"/>
+                    <Label
+                 Grid.Column="1"
+                 Grid.Row="2"
+                 Text="Your receipt #00168 is waiting to be approved"
+                 FontFamily="DINNextLTPro#400"
+                 FontSize="12"
+                 FontAttributes="None"
+                 TextColor="#FF000000" />
+                    <Image
+                 Grid.Column="0"
+                 Grid.Row="4"
+                 Source="Speakerphone.png"/>
+                    <Label
+                 Grid.Row="4"
+                 Grid.Column="1"
+                 Text="Your receipt #00169 is waiting to be approved"
+                 FontFamily="DINNextLTPro#400"
+                 FontSize="12"
+                 FontAttributes="None"
+                 TextColor="#FF000000" />
+                </Grid>
+            </Frame>
+
+            <Frame
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    BorderColor = "#FFFFFFFF"
+                    BackgroundColor="#FFFFFFFF"/>
+
+            <FlexLayout VerticalOptions="End">
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height = "Auto"/>
+                        <RowDefinition Height = "20.6"/>
+                        <RowDefinition Height = "20.6"/>
+                        <RowDefinition Height = "20.6"/>
+                        <RowDefinition Height = "20.6"/>
+                        <RowDefinition Height = "20.6"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="77"/>
+                        <ColumnDefinition Width="77"/>
+                        <ColumnDefinition Width="77"/>
+                        <ColumnDefinition Width="77"/>
+                        <ColumnDefinition Width="77"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image
+                        HorizontalOptions="Fill"
+                        Aspect="AspectFill"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="5"
+                        Grid.RowSpan="5"
+                        Margin="0"
+                        Source="NavigationBar.png"/>
+
+                    <Button
+                        BorderColor="Transparent"
+                        BackgroundColor="Transparent"
+                        WidthRequest="77"
+                        HeightRequest="20.6"
+                        Grid.Row="2"
+                        Grid.RowSpan="4"
+                        Grid.Column="0"/>
+
+                    <Button
+                        BorderColor="Transparent"
+                        BackgroundColor="Transparent"
+                        WidthRequest="77"
+                        HeightRequest="20.6"
+                        Grid.Row="2"
+                        Grid.RowSpan="4"
+                        Grid.Column="1"/>
+
+                    <Button
+                        BorderColor="Transparent"
+                        BackgroundColor="Transparent"
+                        WidthRequest="77"
+                        HeightRequest="20.6"
+                        Grid.Row="1"
+                        Grid.RowSpan="4"
+                        Grid.Column="2"/>
+
+                    <Button
+                        BorderColor="Transparent"
+                        BackgroundColor="Transparent"
+                        WidthRequest="77"
+                        HeightRequest="20.6"
+                        Grid.Row="2"
+                        Grid.RowSpan="4"
+                        Grid.Column="3"/>
+
+                    <Button
+                        BorderColor="Transparent"
+                        BackgroundColor="Transparent"
+                        WidthRequest="77"
+                        HeightRequest="20.6"
+                        Grid.Row="2"
+                        Grid.RowSpan="4"
+                        Grid.Column="4"/>
+                </Grid>
+            </FlexLayout>
+
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>

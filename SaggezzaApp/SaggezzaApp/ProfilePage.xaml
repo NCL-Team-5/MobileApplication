@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SaggezzaApp.ProfilePage">
+    <ContentPage.Content>
+        <StackLayout 
+            
+        
+        BackgroundColor="#FFFFFFFF">
+        
+        <Grid 
+            Padding="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height = "50"/>
+                <RowDefinition Height = "50"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="5"/>
+            </Grid.ColumnDefinitions>
+
+            <Image
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                Aspect="AspectFill"
+                Grid.Column="0"
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Grid.ColumnSpan="5"
+                Source="SaggezzaGreen.png"/>
+
+            <Image
+                HorizontalOptions="Start"
+                AnchorX="5"
+                Grid.Row="1"
+                Grid.Column="1"
+                Source="logo_saggezza.png"/>
+
+            <Image
+                HorizontalOptions="End"
+                Grid.Row="1"
+                Grid.Column="3"
+                Source="VectorCog.png"/>
+
+            <Label
+                HorizontalOptions="Center"
+                Grid.Column="2"
+                Grid.Row="1"
+                Text="Profile" 
+                FontFamily="DINNextLTPro#400" 
+                FontSize="25" 
+                FontAttributes="None" 
+                TextColor="#FFFFFFFF"/>
+
+        </Grid>
+
+        <FlexLayout 
+            Margin="15">
+            <Frame
+                WidthRequest="315" 
+                HeightRequest="186" 
+                HasShadow="true" 
+                BackgroundColor="#E5E5E5"
+                CornerRadius="3">
+            
+                <StackLayout 
+                    WidthRequest="315" 
+                    HeightRequest="186" 
+                    BackgroundColor="#FFFFFFFF"
+                    Spacing="10">
+
+                    <FlexLayout
+                        Direction="Row">
+                        
+                        <Image
+                            Source="ProfilePersonIcon.png"
+                            HorizontalOptions="Start"/>
+
+                        <Label Text="    "/>
+                        <Label
+                            Text="Your Details" 
+                            FontFamily="DINNextLTPro#400" 
+                            FontSize="20" 
+                            FontAttributes="None" 
+                            TextColor="#FF000000"/>
+                    </FlexLayout>
+
+                    <BoxView 
+                        HorizontalOptions="Center" 
+                        WidthRequest="300" 
+                        HeightRequest="3"
+                        Color="#E5E5E5"
+                        Margin="10"/>
+
+                    <FlexLayout>
+                        <Label
+                            Text="Full Name:   " 
+                            FontFamily="DINNextLTPro#400" 
+                            FontSize="20" 
+                            FontAttributes="None" 
+                            TextColor="#FF000000"/>
+
+                        <Label
+                            Text="John Smith" 
+                            FontFamily="DINNextLTPro#400" 
+                            FontSize="20" 
+                            FontAttributes="None" 
+                            TextColor="#FF000000"/>
+                    </FlexLayout>
+
+                    <FlexLayout>
+                        <Label
+                            Text="ID Number:   19875983" 
+                            FontFamily="DINNextLTPro#400" 
+                            FontSize="20" 
+                            FontAttributes="None" 
+                            TextColor="#FF000000"/>
+
+                        <Label
+                            Text="19875983" 
+                            FontFamily="DINNextLTPro#400" 
+                            FontSize="20" 
+                            FontAttributes="None" 
+                            TextColor="#FF000000"/>
+                    </FlexLayout>
+
+                    <FlexLayout>
+                        <Label
+                            Text="Department:  " 
+                            FontFamily="DINNextLTPro#400" 
+                            FontSize="20" 
+                            FontAttributes="None" 
+                            TextColor="#FF000000"/>
+
+                        <Label
+                            Text="Software Development" 
+                            FontFamily="DINNextLTPro#400" 
+                            FontSize="20" 
+                            FontAttributes="None" 
+                            TextColor="#FF000000"/>
+                    </FlexLayout>
+                    
+                </StackLayout>
+                
+            </Frame>
+            
+        </FlexLayout>
+            
+        <Frame
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    BorderColor = "#FFFFFFFF"
+                    BackgroundColor="#FFFFFFFF"/>
+
+            <FlexLayout VerticalOptions="End">
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height = "Auto"/>
+                        <RowDefinition Height = "20.6"/>
+                        <RowDefinition Height = "20.6"/>
+                        <RowDefinition Height = "20.6"/>
+                        <RowDefinition Height = "20.6"/>
+                        <RowDefinition Height = "20.6"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="77"/>
+                        <ColumnDefinition Width="77"/>
+                        <ColumnDefinition Width="77"/>
+                        <ColumnDefinition Width="77"/>
+                        <ColumnDefinition Width="77"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image
+                        HorizontalOptions="Fill"
+                        Aspect="AspectFill"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="5"
+                        Grid.RowSpan="5"
+                        Margin="0"
+                        Source="NavigationBar.png"/>
+
+                    <Button
+                        BorderColor="Transparent"
+                        BackgroundColor="Transparent"
+                        WidthRequest="77"
+                        HeightRequest="20.6"
+                        Grid.Row="2"
+                        Grid.RowSpan="4"
+                        Grid.Column="0"/>
+
+                    <Button
+                        BorderColor="Transparent"
+                        BackgroundColor="Transparent"
+                        WidthRequest="77"
+                        HeightRequest="20.6"
+                        Grid.Row="2"
+                        Grid.RowSpan="4"
+                        Grid.Column="1"/>
+
+                    <Button
+                        BorderColor="Transparent"
+                        BackgroundColor="Transparent"
+                        WidthRequest="77"
+                        HeightRequest="20.6"
+                        Grid.Row="1"
+                        Grid.RowSpan="4"
+                        Grid.Column="2"/>
+
+                    <Button
+                        BorderColor="Transparent"
+                        BackgroundColor="Transparent"
+                        WidthRequest="77"
+                        HeightRequest="20.6"
+                        Grid.Row="2"
+                        Grid.RowSpan="4"
+                        Grid.Column="3"/>
+
+                    <Button
+                        BorderColor="Transparent"
+                        BackgroundColor="Transparent"
+                        WidthRequest="77"
+                        HeightRequest="20.6"
+                        Grid.Row="2"
+                        Grid.RowSpan="4"
+                        Grid.Column="4"/>
+                </Grid>
+            </FlexLayout>
+     
+    </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

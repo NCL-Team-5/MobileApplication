@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SaggezzaApp.PastReceipts">
+    <ContentPage.Content>
+        <FlexLayout>
+            <FlexLayout>
+            <Grid
+            Padding="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height = "20"/>
+                    <RowDefinition Height = "50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="5"/>
+                </Grid.ColumnDefinitions>
+                <Image
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                Aspect="AspectFill"
+                Grid.Column="0"
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Grid.ColumnSpan="5"
+                Source="SaggezzaGreen.png"/>
+                <Image
+                HorizontalOptions="Start"
+                AnchorX="5"
+                Grid.Row="1"
+                Grid.Column="1"
+                Source="logo_saggezza.png"/>
+                <Image
+                HorizontalOptions="End"
+                Grid.Row="1"
+                Grid.Column="3"
+                Source="VectorCog.png"/>
+                <Label
+                HorizontalOptions="Center"
+                Grid.Column="2"
+                Grid.Row="1"
+                Text="Past Receipts"
+                FontFamily="DINNextLTPro#400"
+                FontSize="25"
+                FontAttributes="None"
+                TextColor="#FFFFFFFF"/>
+            </Grid>
+            </FlexLayout>
+            <Label
+                Text="Descending Order"
+                HorizontalTextAlignment="End"
+                FontFamily="DINNextLTPro#400"/>
+            <Frame HasShadow="true">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="250"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        HorizontalTextAlignment="Start"
+                        Text="#00169"
+                        FontFamily="DINNextLTPro#400"
+                        FontSize="20"
+                        FontAttributes="None"
+                        TextColor="#FF000000" />
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        HorizontalTextAlignment="End"
+                        TextColor="#ffc107"
+                        FontSize="20"
+                        FontFamily="DINNextLTPro#400"
+                        Text="Pending"/>
+                </Grid>
+            </Frame>
+            <Frame HasShadow="true">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="250"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        HorizontalTextAlignment="Start"
+                        Text="#00168"
+                        FontFamily="DINNextLTPro#400"
+                        FontSize="20"
+                        FontAttributes="None"
+                        TextColor="#FF000000" />
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        HorizontalTextAlignment="End"
+                        TextColor="#ffc107"
+                        FontSize="20"
+                        FontFamily="DINNextLTPro#400"
+                        Text="Pending"/>
+                </Grid>
+            </Frame>
+            <Frame HasShadow="true">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="250"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="#00167"
+                        FontFamily="DINNextLTPro#400"
+                        FontSize="20"
+                        FontAttributes="None"
+                        TextColor="#FF000" />
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        HorizontalTextAlignment="End"
+                        TextColor="#91d709"
+                        FontSize="20"
+                        FontFamily="DINNextLTPro#400"
+                        Text="Approved" />
+                </Grid>
+            </Frame>
+            <Frame HasShadow="true">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="250"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        HorizontalTextAlignment="Start"
+                        Text="#00166"
+                        FontFamily="DINNextLTPro#400"
+                        FontSize="20"
+                        FontAttributes="None"
+                        TextColor="#FF000000" />
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        HorizontalTextAlignment="End"
+                        TextColor="#91d709"
+                        FontSize="20"
+                        FontFamily="DINNextLTPro#400"
+                        Text="Approved"/>
+                </Grid>
+            </Frame>
+            <Frame HasShadow="true">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="250"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        HorizontalTextAlignment="Start"
+                        Text="#00165"
+                        FontFamily="DINNextLTPro#400"
+                        FontSize="20"
+                        FontAttributes="None"
+                        TextColor="#FF000000" />
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        HorizontalTextAlignment="End"
+                        TextColor="#ff3d00"
+                        FontSize="20"
+                        FontFamily="DINNextLTPro#400"
+                        Text="Declined"/>
+                </Grid>
+            </Frame>
+            <Frame HasShadow="true">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="250"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        HorizontalTextAlignment="Start"
+                        Text="#00164"
+                        FontFamily="DINNextLTPro#400"
+                        FontSize="20"
+                        FontAttributes="None"
+                        TextColor="#FF000000" />
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        HorizontalTextAlignment="End"
+                        TextColor="#91d709"
+                        FontSize="20"
+                        FontFamily="DINNextLTPro#400"
+                        Text="Approved"/>
+                </Grid>
+            </Frame>
+            <Frame HasShadow="true">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="250"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        HorizontalTextAlignment="Start"
+                        Text="#00163"
+                        FontFamily="DINNextLTPro#400"
+                        FontSize="20"
+                        FontAttributes="None"
+                        TextColor="#FF000000" />
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        HorizontalTextAlignment="End"
+                        TextColor="#91d709"
+                        FontSize="20"
+                        FontFamily="DINNextLTPro#400"
+                        Text="Approved"/>
+                </Grid>
+            </Frame>
+
+            <Frame
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    BorderColor = "#FFFFFFFF"
+                    BackgroundColor="#FFFFFFFF"/>
+
+            <FlexLayout VerticalOptions="End">
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height = "Auto"/>
+                        <RowDefinition Height = "20.6"/>
+                        <RowDefinition Height = "20.6"/>
+                        <RowDefinition Height = "20.6"/>
+                        <RowDefinition Height = "20.6"/>
+                        <RowDefinition Height = "20.6"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="77"/>
+                        <ColumnDefinition Width="77"/>
+                        <ColumnDefinition Width="77"/>
+                        <ColumnDefinition Width="77"/>
+                        <ColumnDefinition Width="77"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image
+                        HorizontalOptions="Fill"
+                        Aspect="AspectFill"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="5"
+                        Grid.RowSpan="5"
+                        Margin="0"
+                        Source="NavigationBar.png"/>
+
+                    <Button
+                        BorderColor="Transparent"
+                        BackgroundColor="Transparent"
+                        WidthRequest="77"
+                        HeightRequest="20.6"
+                        Grid.Row="2"
+                        Grid.RowSpan="4"
+                        Grid.Column="0"/>
+
+                    <Button
+                        BorderColor="Transparent"
+                        BackgroundColor="Transparent"
+                        WidthRequest="77"
+                        HeightRequest="20.6"
+                        Grid.Row="2"
+                        Grid.RowSpan="4"
+                        Grid.Column="1"/>
+
+                    <Button
+                        BorderColor="Transparent"
+                        BackgroundColor="Transparent"
+                        WidthRequest="77"
+                        HeightRequest="20.6"
+                        Grid.Row="1"
+                        Grid.RowSpan="4"
+                        Grid.Column="2"/>
+
+                    <Button
+                        BorderColor="Transparent"
+                        BackgroundColor="Transparent"
+                        WidthRequest="77"
+                        HeightRequest="20.6"
+                        Grid.Row="2"
+                        Grid.RowSpan="4"
+                        Grid.Column="3"/>
+
+                    <Button
+                        BorderColor="Transparent"
+                        BackgroundColor="Transparent"
+                        WidthRequest="77"
+                        HeightRequest="20.6"
+                        Grid.Row="2"
+                        Grid.RowSpan="4"
+                        Grid.Column="4"/>
+                </Grid>
+            </FlexLayout>
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>

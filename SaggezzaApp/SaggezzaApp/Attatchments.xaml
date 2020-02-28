@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SaggezzaApp.Attatchments">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid
+            Padding="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height = "50"/>
+                    <RowDefinition Height = "50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="5"/>
+                </Grid.ColumnDefinitions>
+               
+                <Image
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Aspect="AspectFill"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Grid.RowSpan="2"
+                    Grid.ColumnSpan="5"
+                    Source="SaggezzaGreen.png"/>
+                
+                <Image
+                    HorizontalOptions="Start"
+                    AnchorX="5"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Source="logo_saggezza.png"/>
+                
+                <Image
+                    HorizontalOptions="End"
+                    Grid.Row="1"
+                    Grid.Column="3"
+                    Source="VectorCog.png"/>
+                
+                <Label
+                    HorizontalOptions="Center"
+                    Grid.Column="2"
+                    Grid.Row="1"
+                    Text="Attachments"
+                    FontFamily="DINNextLTPro#400"
+                    FontSize="25"
+                    FontAttributes="None"
+                    TextColor="#FFFFFFFF"/>
+                
+                <Image
+                    HorizontalOptions="Center"
+                    VerticalOptions="FillAndExpand"
+                    Aspect="AspectFill"
+                    Grid.Row="2"
+                    Grid.RowSpan="3"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="4"
+                    Source="past_attachments.png"/>
+                
+                <Image
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Aspect="AspectFill"
+                    Grid.Row="5"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="5"
+                    Grid.RowSpan="4"
+                    Source="attachments.png"/>
+                <Image
+                    HorizontalOptions="FillAndExpand"
+                    Aspect="AspectFill"
+                    Grid.Row="8"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="5"
+                    Source="NavigationBar.png"/>
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SaggezzaApp.SettingsPage">
+    <ContentPage.Content>
+        <StackLayout 
+        Orientation="Vertical"
+        BackgroundColor="#FFFFFFFF">
+
+            <Grid 
+            Padding="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height = "50"/>
+                    <RowDefinition Height = "50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="5"/>
+                </Grid.ColumnDefinitions>
+
+                <Image
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                Aspect="AspectFill"
+                Grid.Column="0"
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Grid.ColumnSpan="5"
+                Source="SaggezzaGreen.png"/>
+
+                <Image
+                HorizontalOptions="Start"
+                AnchorX="5"
+                Grid.Row="1"
+                Grid.Column="1"
+                Source="logo_saggezza.png"/>
+
+                <Image
+                HorizontalOptions="End"
+                Grid.Row="1"
+                Grid.Column="3"
+                Source="VectorCog.png"/>
+
+                <Label
+                HorizontalOptions="Center"
+                Grid.Column="2"
+                Grid.Row="1"
+                Text="Settings" 
+                FontFamily="DINNextLTPro#400" 
+                FontSize="25" 
+                FontAttributes="None" 
+                TextColor="#FFFFFFFF"/>
+            </Grid>
+
+            <Frame
+                HeightRequest="5"
+                BorderColor="#ffffff"
+                HasShadow="False"/>
+
+            <FlexLayout 
+                Direction="Row"
+                JustifyContent="SpaceEvenly">
+
+                <Button 
+                    Text="Help"  
+                    HeightRequest="65"
+                    WidthRequest="130"
+                    FontFamily="DINNextLTPro#400" 
+                    FontSize="20" 
+                    FontAttributes="None"  
+                    TextColor="#FF000000"
+                    CornerRadius="3"
+                    BackgroundColor="#ffffff"
+                    BorderColor="#E5E5E5"
+                    BorderWidth="1.5"/>
+
+                <Button 
+                    Text="Logout"  
+                    HeightRequest="65"
+                    WidthRequest="130"
+                    FontFamily="DINNextLTPro#400" 
+                    FontSize="20" 
+                    FontAttributes="None" 
+                    TextColor="#FF000000"
+                    CornerRadius="3"
+                    BackgroundColor="#ffffff"
+                    BorderColor="#E5E5E5"
+                    BorderWidth="1.5"/>
+            </FlexLayout>
+
+            <Frame
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    BorderColor = "#FFFFFFFF"
+                    BackgroundColor="#FFFFFFFF"/>
+
+            <FlexLayout VerticalOptions="End">
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height = "Auto"/>
+                        <RowDefinition Height = "20.6"/>
+                        <RowDefinition Height = "20.6"/>
+                        <RowDefinition Height = "20.6"/>
+                        <RowDefinition Height = "20.6"/>
+                        <RowDefinition Height = "20.6"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="77"/>
+                        <ColumnDefinition Width="77"/>
+                        <ColumnDefinition Width="77"/>
+                        <ColumnDefinition Width="77"/>
+                        <ColumnDefinition Width="77"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image
+                        HorizontalOptions="Fill"
+                        Aspect="AspectFill"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="5"
+                        Grid.RowSpan="5"
+                        Margin="0"
+                        Source="NavigationBar.png"/>
+
+                    <Button
+                        BorderColor="Transparent"
+                        BackgroundColor="Transparent"
+                        WidthRequest="77"
+                        HeightRequest="20.6"
+                        Grid.Row="2"
+                        Grid.RowSpan="4"
+                        Grid.Column="0"/>
+
+                    <Button
+                        BorderColor="Transparent"
+                        BackgroundColor="Transparent"
+                        WidthRequest="77"
+                        HeightRequest="20.6"
+                        Grid.Row="2"
+                        Grid.RowSpan="4"
+                        Grid.Column="1"/>
+
+                    <Button
+                        BorderColor="Transparent"
+                        BackgroundColor="Transparent"
+                        WidthRequest="77"
+                        HeightRequest="20.6"
+                        Grid.Row="1"
+                        Grid.RowSpan="4"
+                        Grid.Column="2"/>
+
+                    <Button
+                        BorderColor="Transparent"
+                        BackgroundColor="Transparent"
+                        WidthRequest="77"
+                        HeightRequest="20.6"
+                        Grid.Row="2"
+                        Grid.RowSpan="4"
+                        Grid.Column="3"/>
+
+                    <Button
+                        BorderColor="Transparent"
+                        BackgroundColor="Transparent"
+                        WidthRequest="77"
+                        HeightRequest="20.6"
+                        Grid.Row="2"
+                        Grid.RowSpan="4"
+                        Grid.Column="4"/>
+                </Grid>
+            </FlexLayout>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
