@@ -7,7 +7,7 @@ namespace SaggezzaApp {
         public App() {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new ProfilePage();
         }
 
         protected override void OnStart() {
