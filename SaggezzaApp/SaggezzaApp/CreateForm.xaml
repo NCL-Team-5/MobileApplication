@@ -5,7 +5,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="SaggezzaApp.CreateForm">
+  <ContentPage.Resources>
+  </ContentPage.Resources>
     <ContentPage.Content>
+    <ScrollView>
         <StackLayout>
             <Grid
             Padding="0">
@@ -67,20 +70,21 @@
                     <Label
            Grid.Row="0"
            Grid.Column="0"
-           Text="Date:"
+           Text="Date"
            HorizontalTextAlignment="Start"
            FontFamily="DINNextLTPro#400"
            FontSize="20"
            FontAttributes="None"
            TextColor="#FF000000"/>
 
-                    <Entry
-                    Placeholder="DD/MM/YY"
+                    <DatePicker
+                    x:Name="Date"
+                    MinimumDate="01/01/2020"
                     Grid.Row="0"
                     Grid.Column="1"
-                    FontFamily="Roboto#400"
                     FontAttributes="None"
-                    TextColor="#FFC4C4C4"
+                    FontFamily="Roboto#400"
+                    TextColor="#000000"
                     WidthRequest="190"
                  />
                 </Grid>
@@ -96,28 +100,28 @@
                     <Label
            Grid.Row="0"
            Grid.Column="0"
-           Text="Receipt:"
+           Text="Receipt"
            HorizontalTextAlignment="Start"
            FontFamily="DINNextLTPro#400"
            FontSize="20"
            FontAttributes="None"
            TextColor="#FF000000"
-                   />
-                    <CheckBox
-                    Grid.Column="1"
-                    IsChecked="True"
-                  />
+           />
+                    <Picker
+                    SelectedIndexChanged="ReceiptPicker_SelectedIndexChanged"
+                    x:Name="ReceiptPicker"
+                    Title="Please select an option"
+                    Grid.Column="1">
+                        <Picker.Items>
+                            <x:String>Yes - Soft Copy</x:String>
+                            <x:String>Yes - Hard Copy</x:String>
+                            <x:String>No Receipt</x:String>
+                        </Picker.Items>
+                    </Picker>
 
-                    <Label
-             Grid.Row="0"
-             Grid.Column="2"
-             Text="Please scan copy and send via email as evidence."
-             FontFamily="Roboto#400"
-             FontAttributes="None"
-             TextColor="#FF000000"
-             FontSize="10"
-             VerticalTextAlignment="Center"/>
-
+                 <Button x:Name="uploadPicture" Text="Upload Picture" Grid.Row="0"
+           Grid.Column="2" BorderWidth="10" FontSize="10" IsVisible="False" Clicked="UploadPicture_Clicked"/>  
+                 
                 </Grid>
                 <Grid>
                     <Grid.RowDefinitions>
@@ -131,7 +135,7 @@
                     <Label
            Grid.Row="0"
            Grid.Column="0"
-           Text="Description:"
+           Text="Description"
            HorizontalTextAlignment="Start"
            FontFamily="DINNextLTPro#400"
            FontSize="20"
@@ -149,99 +153,142 @@
              VerticalTextAlignment="Center"/>
 
                     <Entry
+                    x:Name="Description"
                     HorizontalTextAlignment="Start"
                     Placeholder="Max 200 Word"
                     Grid.Row="1"
-                    Grid.Column="0"
+                    Grid.Column="1"
                     FontFamily="Roboto#400"
                     FontAttributes="None"
-                    TextColor="#FFC4C4C4"
+                    TextColor="#000000"
                     WidthRequest="190"
+                    />
+
+
+
+                </Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label
+           Grid.Row="0"
+           Grid.Column="0"
+           Text="Category"
+           HorizontalTextAlignment="Start"
+           FontFamily="DINNextLTPro#400"
+           FontSize="20"
+           FontAttributes="None"
+           TextColor="#FF000000"/>
+
+                    <Picker
+                    x:Name="Category"
+                    Title="Please select an option"
+                    Grid.Column="1">
+                        <Picker.Items>
+                            <x:String>Employee Rewards</x:String>
+                            <x:String>Consumables</x:String>
+                            <x:String>General Office Expenses</x:String>
+                            <x:String>General Travel: Accommodation</x:String>
+                            <x:String>General Travel: Travel</x:String>
+                            <x:String>Sales Travel: Accommodation</x:String>
+                            <x:String>Sales Travel: Travel</x:String>
+                            <x:String>Sales Travel: Subsistence</x:String>
+                            <x:String>Sales Entertaining</x:String>
+                            <x:String>Staff Entertaining</x:String>
+                            <x:String>Recruitment Fees</x:String>
+                            <x:String>Visa and Immigration</x:String>
+                            <x:String>Software and IT</x:String>
+                            <x:String>Staff Training</x:String>
+                            <x:String>Stationary and Office Supplies</x:String>
+                            <x:String>Telephone and Conference</x:String>
+                            <x:String>Other</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                </Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label
+           Grid.Row="0"
+           Grid.Column="0"
+           Text="Client name or Saggezza"
+           HorizontalTextAlignment="Start"
+           FontFamily="DINNextLTPro#400"
+           FontSize="20"
+           FontAttributes="None"
+           TextColor="#FF000000"/>
+
+                    <Picker
+                    SelectedIndexChanged="ClientName_SelectedIndexChanged"
+                    x:Name="ClientName"
+                    Title="Please select an option"
+                    Grid.Column="1">
+                        <Picker.Items>
+                            <x:String>Saggezza UK</x:String>
+                            <x:String>Saggezza US</x:String>
+                            <x:String>Client</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                     <Label
+                         x:Name="ClientNameLabel"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="Client Name"
+                        HorizontalTextAlignment="Start"
+                        FontFamily="DINNextLTPro#400"
+                        FontSize="20"
+                        FontAttributes="None"
+                        TextColor="#FF000000"
+                        IsVisible="False"/>
+
+                    <Entry
+                    x:Name="ExternalClientName"
+                    Placeholder="Enter Text"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    FontFamily="Roboto#400"
+                    FontAttributes="None"
+                    TextColor="#000000"
+                    WidthRequest="190"
+                    IsVisible="False"
                  />
-
-
-
                 </Grid>
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="110"/>
                         <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
 
                     <Label
            Grid.Row="0"
            Grid.Column="0"
-           Text="Category:"
-           HorizontalTextAlignment="Start"
-           FontFamily="DINNextLTPro#400"
-           FontSize="20"
-           FontAttributes="None"
-           TextColor="#FF000000"/>
-
-                    <Picker 
-                    Title="Please select an option"
-                    Grid.Column="1">
-                        <Picker.Items>
-                            <x:String>1</x:String>
-                            <x:String>2</x:String>
-                            <x:String>3</x:String>
-                            <x:String>4</x:String>
-                            <x:String>5</x:String>
-                            <x:String>6</x:String>
-                            <x:String>7</x:String>
-                        </Picker.Items>
-                    </Picker>
-
-                </Grid>
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="150"/>
-                        <ColumnDefinition Width="Auto"/>
-                    </Grid.ColumnDefinitions>
-
-                    <Label
-           Grid.Row="0"
-           Grid.Column="0"
-           Text="Client name or Saggezza:"
-           HorizontalTextAlignment="Start"
-           FontFamily="DINNextLTPro#400"
-           FontSize="20"
-           FontAttributes="None"
-           TextColor="#FF000000"/>
-
-                    <Picker 
-                    Title="Please select an option"
-                    Grid.Column="1">
-                        <Picker.Items>
-                            <x:String>1</x:String>
-                            <x:String>2</x:String>
-                            <x:String>3</x:String>
-                            <x:String>4</x:String>
-                            <x:String>5</x:String>
-                            <x:String>6</x:String>
-                            <x:String>7</x:String>
-                        </Picker.Items>
-                    </Picker>
-                </Grid>
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="150"/>
-                        <ColumnDefinition Width="Auto"/>
-                    </Grid.ColumnDefinitions>
-
-                    <Label
-           Grid.Row="0"
-           Grid.Column="0"
-           Text="Name of client Project:"
+           Text="Name of client Project"
            HorizontalTextAlignment="Start"
            FontFamily="DINNextLTPro#400"
            FontSize="20"
@@ -249,12 +296,13 @@
            TextColor="#FF000000"/>
 
                     <Entry
+                    x:Name="ProjectName"
                     Placeholder="Enter Text"
                     Grid.Row="0"
                     Grid.Column="1"
                     FontFamily="Roboto#400"
                     FontAttributes="None"
-                    TextColor="#FFC4C4C4"
+                    TextColor="#000000"
                     WidthRequest="190"
                  />
                 </Grid>
@@ -270,7 +318,7 @@
                     <Label
            Grid.Row="0"
            Grid.Column="0"
-           Text="Billable to client?:"
+           Text="Billable to client?"
            HorizontalTextAlignment="Start"
            FontFamily="DINNextLTPro#400"
            FontSize="20"
@@ -278,10 +326,7 @@
            TextColor="#FF000000"/>
 
                     <CheckBox
-                    Grid.Column="1"
-                    IsChecked="True"
-                  />
-                    <CheckBox
+                    x:Name="BillableToClient"
                     Grid.Column="1"
                     IsChecked="True"
                   />
@@ -299,23 +344,99 @@
                     <Label
            Grid.Row="0"
            Grid.Column="0"
-           Text="Payment Method:"
+           Text="Payment Method"
            HorizontalTextAlignment="Start"
            FontFamily="DINNextLTPro#400"
            FontSize="20"
            FontAttributes="None"
            TextColor="#FF000000"/>
 
+                    <Picker
+                    x:Name="PaymentMethod"
+                    Title="Please select an option"
+                    Grid.Column="1">
+                        <Picker.Items>
+                            <x:String>Own Payment</x:String>
+                            <x:String>Corporate Card</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="110"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                </Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label
+           Grid.Row="0"
+           Grid.Column="0"
+           Text="Currency"
+           HorizontalTextAlignment="Start"
+           FontFamily="DINNextLTPro#400"
+           FontSize="20"
+           FontAttributes="None"
+           TextColor="#FF000000"/>
+
+                    <Picker
+                    x:Name="Currency"
+                    Title="Please select an option"
+                    Grid.Column="1">
+                        <Picker.Items>
+                            <x:String>GBP</x:String>
+                            <x:String>EUR</x:String>
+                            <x:String>USD</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label
+           Grid.Row="0"
+           Grid.Column="0"
+           Text="Amount"
+           HorizontalTextAlignment="Start"
+           FontFamily="DINNextLTPro#400"
+           FontSize="20"
+           FontAttributes="None"
+           TextColor="#FF000000"/>
+
+
                     <Entry
-                    Placeholder="Enter Text"
+                    x:Name="Amount"
+                    Placeholder="Amount"
                     Grid.Row="0"
                     Grid.Column="1"
                     FontFamily="Roboto#400"
                     FontAttributes="None"
-                    TextColor="#FFC4C4C4"
-                    WidthRequest="190"/>
+                    TextColor="#000000"
+                    WidthRequest="80"
+                    Keyboard="Numeric"
+                 />
 
+                  
                 </Grid>
+                <Button x:Name="submit" Text="Submit" BorderWidth="20" Clicked="Submit_Clicked"/>
         </StackLayout>
+    </ScrollView>
     </ContentPage.Content>
 </ContentPage>
