@@ -17,3 +17,7 @@ Right Click on SaggezzaApp (master) folder -> Manage NuGet packages and install 
 [Xam.Plugin.Media](https://nuget.org/packages/Xam.Plugin.Media/) [![NuGet](https://img.shields.io/nuget/vpre/Xam.Plugin.Media.svg?label=NuGet)](https://www.nuget.org/packages/Xam.Plugin.Media/) (Add to all 3 solutions when prompted)
 
 [Xam.Plugins.Notifier](https://nuget.org/packages/Xam.Plugin.Media/) [![NuGet](https://img.shields.io/nuget/vpre/Xam.Plugins.Notifier.svg?label=NuGet)](https://www.nuget.org/packagesXam.Plugins.Notifier/) (Add to all 3 solutions when prompted)
+
+<h3>Permissions</h3>
+
+Make sure you give the app permissions to access storage (so it can access camera gallery) this may need to be done in settings if you're not prompted in app
