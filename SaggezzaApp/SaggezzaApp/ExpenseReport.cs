@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Plugin.CloudFirestore.Attributes;
 
 namespace SaggezzaApp

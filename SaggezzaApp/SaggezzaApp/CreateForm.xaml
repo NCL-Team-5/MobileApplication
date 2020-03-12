@@ -5,7 +5,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="SaggezzaApp.CreateForm">
+  <ContentPage.Resources>
+  </ContentPage.Resources>
     <ContentPage.Content>
+    <ScrollView>
         <StackLayout>
             <Grid
             Padding="0">
@@ -20,7 +23,7 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="5"/>
                 </Grid.ColumnDefinitions>
-
+                
                 <Image
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="FillAndExpand"
@@ -36,13 +39,13 @@
                     Grid.Row="1"
                     Grid.Column="1"
                     Source="logo_saggezza.png"/>
-
+                
                 <Image
                     HorizontalOptions="End"
                     Grid.Row="1"
                     Grid.Column="3"
                     Source="VectorCog.png"/>
-
+                
                 <Label
                     HorizontalOptions="Center"
                     Grid.Column="2"
@@ -53,18 +56,18 @@
                 FontAttributes="None"
                 TextColor="#FFFFFFFF"/>
 
-            </Grid>
+                </Grid>
 
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="100"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
 
-                <Label
+                    <Label
            Grid.Row="0"
            Grid.Column="0"
            Text="Date"
@@ -74,7 +77,7 @@
            FontAttributes="None"
            TextColor="#FF000000"/>
 
-                <DatePicker
+                    <DatePicker
                     x:Name="Date"
                     MinimumDate="01/01/2020"
                     Grid.Row="0"
@@ -84,17 +87,17 @@
                     TextColor="#000000"
                     WidthRequest="190"
                  />
-            </Grid>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="100"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
+                </Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
 
-                <Label
+                    <Label
            Grid.Row="0"
            Grid.Column="0"
            Text="Receipt"
@@ -104,20 +107,32 @@
            FontAttributes="None"
            TextColor="#FF000000"
            />
-                <Button x:Name="uploadPicture" Text="Upload Picture" Grid.Row="0"
-           Grid.Column="1" BorderWidth="20" Clicked="UploadPicture_Clicked"/>
+                    <Picker
+                    SelectedIndexChanged="ReceiptPicker_SelectedIndexChanged"
+                    x:Name="ReceiptPicker"
+                    Title="Please select an option"
+                    Grid.Column="1">
+                        <Picker.Items>
+                            <x:String>Yes - Soft Copy</x:String>
+                            <x:String>Yes - Hard Copy</x:String>
+                            <x:String>No Receipt</x:String>
+                        </Picker.Items>
+                    </Picker>
 
-            </Grid>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="140"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
+                 <Button x:Name="uploadPicture" Text="Upload Picture" Grid.Row="0"
+           Grid.Column="2" BorderWidth="10" FontSize="10" IsVisible="False" Clicked="UploadPicture_Clicked"/>  
+                 
+                </Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="140"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
 
-                <Label
+                    <Label
            Grid.Row="0"
            Grid.Column="0"
            Text="Description"
@@ -127,7 +142,7 @@
            FontAttributes="None"
            TextColor="#FF000000"/>
 
-                <Label
+                    <Label
              Grid.Row="0"
              Grid.Column="1"
              Text="(See help in settings for what to include)"
@@ -137,7 +152,7 @@
              FontSize="10"
              VerticalTextAlignment="Center"/>
 
-                <Entry
+                    <Entry
                     x:Name="Description"
                     HorizontalTextAlignment="Start"
                     Placeholder="Max 200 Word"
@@ -151,17 +166,17 @@
 
 
 
-            </Grid>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="150"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
+                </Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
 
-                <Label
+                    <Label
            Grid.Row="0"
            Grid.Column="0"
            Text="Category"
@@ -171,42 +186,42 @@
            FontAttributes="None"
            TextColor="#FF000000"/>
 
-                <Picker
+                    <Picker
                     x:Name="Category"
                     Title="Please select an option"
                     Grid.Column="1">
-                    <Picker.Items>
-                        <x:String>Employee Rewards</x:String>
-                        <x:String>Consumables</x:String>
-                        <x:String>General Office Expenses</x:String>
-                        <x:String>General Travel: Accommodation</x:String>
-                        <x:String>General Travel: Travel</x:String>
-                        <x:String>Sales Travel: Accommodation</x:String>
-                        <x:String>Sales Travel: Travel</x:String>
-                        <x:String>Sales Travel: Subsistence</x:String>
-                        <x:String>Sales Entertaining</x:String>
-                        <x:String>Staff Entertaining</x:String>
-                        <x:String>Recruitment Fees</x:String>
-                        <x:String>Visa and Immigration</x:String>
-                        <x:String>Software and IT</x:String>
-                        <x:String>Staff Training</x:String>
-                        <x:String>Stationary and Office Supplies</x:String>
-                        <x:String>Telephone and Conference</x:String>
-                        <x:String>Other</x:String>
-                    </Picker.Items>
-                </Picker>
+                        <Picker.Items>
+                            <x:String>Employee Rewards</x:String>
+                            <x:String>Consumables</x:String>
+                            <x:String>General Office Expenses</x:String>
+                            <x:String>General Travel: Accommodation</x:String>
+                            <x:String>General Travel: Travel</x:String>
+                            <x:String>Sales Travel: Accommodation</x:String>
+                            <x:String>Sales Travel: Travel</x:String>
+                            <x:String>Sales Travel: Subsistence</x:String>
+                            <x:String>Sales Entertaining</x:String>
+                            <x:String>Staff Entertaining</x:String>
+                            <x:String>Recruitment Fees</x:String>
+                            <x:String>Visa and Immigration</x:String>
+                            <x:String>Software and IT</x:String>
+                            <x:String>Staff Training</x:String>
+                            <x:String>Stationary and Office Supplies</x:String>
+                            <x:String>Telephone and Conference</x:String>
+                            <x:String>Other</x:String>
+                        </Picker.Items>
+                    </Picker>
 
-            </Grid>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="150"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
+                </Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
 
-                <Label
+                    <Label
            Grid.Row="0"
            Grid.Column="0"
            Text="Client name or Saggezza"
@@ -216,28 +231,28 @@
            FontAttributes="None"
            TextColor="#FF000000"/>
 
-                <Picker
+                    <Picker
                     SelectedIndexChanged="ClientName_SelectedIndexChanged"
                     x:Name="ClientName"
                     Title="Please select an option"
                     Grid.Column="1">
-                    <Picker.Items>
-                        <x:String>Saggezza UK</x:String>
-                        <x:String>Saggezza US</x:String>
-                        <x:String>Client</x:String>
-                    </Picker.Items>
-                </Picker>
-            </Grid>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="150"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
+                        <Picker.Items>
+                            <x:String>Saggezza UK</x:String>
+                            <x:String>Saggezza US</x:String>
+                            <x:String>Client</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
 
-                <Label
+                     <Label
                          x:Name="ClientNameLabel"
                         Grid.Row="0"
                         Grid.Column="0"
@@ -249,7 +264,7 @@
                         TextColor="#FF000000"
                         IsVisible="False"/>
 
-                <Entry
+                    <Entry
                     x:Name="ExternalClientName"
                     Placeholder="Enter Text"
                     Grid.Row="0"
@@ -260,17 +275,17 @@
                     WidthRequest="190"
                     IsVisible="False"
                  />
-            </Grid>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="110"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
+                </Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="110"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
 
-                <Label
+                    <Label
            Grid.Row="0"
            Grid.Column="0"
            Text="Name of client Project"
@@ -280,7 +295,7 @@
            FontAttributes="None"
            TextColor="#FF000000"/>
 
-                <Entry
+                    <Entry
                     x:Name="ProjectName"
                     Placeholder="Enter Text"
                     Grid.Row="0"
@@ -290,17 +305,17 @@
                     TextColor="#000000"
                     WidthRequest="190"
                  />
-            </Grid>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="110"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
+                </Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="110"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
 
-                <Label
+                    <Label
            Grid.Row="0"
            Grid.Column="0"
            Text="Billable to client?"
@@ -310,23 +325,23 @@
            FontAttributes="None"
            TextColor="#FF000000"/>
 
-                <CheckBox
+                    <CheckBox
                     x:Name="BillableToClient"
                     Grid.Column="1"
                     IsChecked="True"
                   />
 
-            </Grid>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="100"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
+                </Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
 
-                <Label
+                    <Label
            Grid.Row="0"
            Grid.Column="0"
            Text="Payment Method"
@@ -336,36 +351,36 @@
            FontAttributes="None"
            TextColor="#FF000000"/>
 
-                <Picker
+                    <Picker
                     x:Name="PaymentMethod"
                     Title="Please select an option"
                     Grid.Column="1">
-                    <Picker.Items>
-                        <x:String>Own Payment</x:String>
-                        <x:String>Corporate Card</x:String>
-                    </Picker.Items>
-                </Picker>
-            </Grid>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="110"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
+                        <Picker.Items>
+                            <x:String>Own Payment</x:String>
+                            <x:String>Corporate Card</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="110"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
 
-            </Grid>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="100"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
+                </Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
 
-                <Label
+                    <Label
            Grid.Row="0"
            Grid.Column="0"
            Text="Currency"
@@ -375,27 +390,27 @@
            FontAttributes="None"
            TextColor="#FF000000"/>
 
-                <Picker
+                    <Picker
                     x:Name="Currency"
                     Title="Please select an option"
                     Grid.Column="1">
-                    <Picker.Items>
-                        <x:String>GBP</x:String>
-                        <x:String>EUR</x:String>
-                        <x:String>USD</x:String>
-                    </Picker.Items>
-                </Picker>
-            </Grid>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="150"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
+                        <Picker.Items>
+                            <x:String>GBP</x:String>
+                            <x:String>EUR</x:String>
+                            <x:String>USD</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
 
-                <Label
+                    <Label
            Grid.Row="0"
            Grid.Column="0"
            Text="Amount"
@@ -405,7 +420,8 @@
            FontAttributes="None"
            TextColor="#FF000000"/>
 
-                <Entry
+
+                    <Entry
                     x:Name="Amount"
                     Placeholder="Amount"
                     Grid.Row="0"
@@ -416,8 +432,11 @@
                     WidthRequest="80"
                     Keyboard="Numeric"
                  />
-            </Grid>
-            <Button x:Name="submit" Text="Submit" BorderWidth="20" Clicked="Submit_Clicked"/>
+
+                  
+                </Grid>
+                <Button x:Name="submit" Text="Submit" BorderWidth="20" Clicked="Submit_Clicked"/>
         </StackLayout>
+    </ScrollView>
     </ContentPage.Content>
 </ContentPage>
