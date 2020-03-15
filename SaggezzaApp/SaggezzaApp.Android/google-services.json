@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "731610605844",
+    "firebase_url": "https://saggezza-b37e6.firebaseio.com",
+    "project_id": "saggezza-b37e6",
+    "storage_bucket": "saggezza-b37e6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:731610605844:android:bd1866f0774a1b5568fa01",
+        "android_client_info": {
+          "package_name": "com.companyname.saggezzaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "731610605844-pnumem158imm73uqho14hjldctiuan8a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQFDRNeWWjARn-AuJRpGItUZApW_p_Gsg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "731610605844-pnumem158imm73uqho14hjldctiuan8a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
