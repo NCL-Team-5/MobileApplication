@@ -4,69 +4,80 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="SaggezzaApp.HomePage">
+             x:Class="SaggezzaApp.HomePage"
+             NavigationPage.HasNavigationBar="False"> <!-- Removing navigation bar from the top of the screen-->
+    
+    <!-- Start of page content-->
     <ContentPage.Content>
-        <FlexLayout>
-            <FlexLayout>
-            <Grid
+        <!-- Top banner for all pages-->
+        <StackLayout Padding="0" Margin="0">
+            <Grid 
             Padding="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height = "20"/>
-                    <RowDefinition Height = "50"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="5"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="5"/>
-                </Grid.ColumnDefinitions>
-                <Image
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="FillAndExpand"
-                Aspect="AspectFill"
-                Grid.Column="0"
-                Grid.Row="0"
-                Grid.RowSpan="2"
-                Grid.ColumnSpan="5"
-                Source="SaggezzaGreen.png"/>
-                <Image
-                HorizontalOptions="Start"
-                AnchorX="5"
-                Grid.Row="1"
-                Grid.Column="1"
-                Source="logo_saggezza.png"/>
-                <Image
-                HorizontalOptions="End"
-                Grid.Row="1"
-                Grid.Column="3"
-                Source="VectorCog.png"/>
-                <Label
-                HorizontalOptions="Center"
-                Grid.Column="2"
-                Grid.Row="1"
-                Text="Home"
-                FontFamily="DINNextLTPro#400"
-                FontSize="25"
-                FontAttributes="None"
-                TextColor="#FFFFFFFF"/>
-            </Grid>
-            </FlexLayout>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height = "50"/>
+                        <RowDefinition Height = "50"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="5"/>
+                    </Grid.ColumnDefinitions>
 
-            <!--WELCOME JOHN-->
+                <!--Green bacground for the top bar -->
+                <Image 
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Aspect="AspectFill"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Grid.RowSpan="2"
+                    Grid.ColumnSpan="5"
+                    Source="SaggezzaGreen.png"/>
+
+                <!-- Saggezza logo-->
+                <Image
+                    HorizontalOptions="Start"
+                    AnchorX="5"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Source="logo_saggezza.png"/>
+
+                <!-- Settings icon -->
+                <Image
+                    HorizontalOptions="End"
+                    Grid.Row="1"
+                    Grid.Column="3"
+                    Source="VectorCog.png"/>
+
+                <!-- page title-->
+                <Label
+                    HorizontalOptions="Center"
+                    Grid.Column="2"
+                    Grid.Row="1"
+                    Text="Home" 
+                    FontFamily="DINNextLTPro#400" 
+                    FontSize="25" 
+                    FontAttributes="None" 
+                    TextColor="#FFFFFFFF"/>
+
+            </Grid>
+
+                <!--WELCOME JOHN-->
             <Label
-     Text="Welcome John..."
-     FontFamily="DINNextLTPro#400"
-     FontSize="24"
-     FontAttributes="None"
-     TextColor="#FF000000" />
+             Text="Welcome John..."
+             FontFamily="DINNextLTPro#400"
+             FontSize="24"
+             FontAttributes="None"
+             TextColor="#FF000000" />   
 
             <!--Notifications box-->
             <Frame
-     WidthRequest="315"
-     HeightRequest="200"
-     HasShadow="true"
-     CornerRadius="10">
+                WidthRequest="315"
+                HeightRequest="200"
+                HasShadow="true"
+                CornerRadius="10"> 
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height = "30"/>
@@ -123,10 +134,11 @@
 
             </Frame>
             <Frame
-    WidthRequest="315"
-    HeightRequest="200"
-    HasShadow="true"
-    BackgroundColor="#FFFFFFFF">
+                WidthRequest="315"
+                HeightRequest="200"
+                HasShadow="true"
+                BackgroundColor="#FFFFFFFF">
+                
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height = "30"/>
@@ -182,14 +194,18 @@
                 </Grid>
             </Frame>
 
+            <!-- Frame to push the nav bar to the bottom-->
             <Frame
                     VerticalOptions="FillAndExpand"
                     HorizontalOptions="FillAndExpand"
-                    BorderColor = "#FFFFFFFF"
+                    BorderColor = "Transparent"
                     BackgroundColor="#FFFFFFFF"/>
 
-            <FlexLayout VerticalOptions="End">
-                <Grid >
+            <!-- Navigation bar image and buttons -->
+            <FlexLayout VerticalOptions="End"
+                        HorizontalOptions="Fill">
+                <!-- grid which holds all the assets of the navigation bar-->
+                <Grid Padding="0" HorizontalOptions="Fill">
                     <Grid.RowDefinitions>
                         <RowDefinition Height = "Auto"/>
                         <RowDefinition Height = "20.6"/>
@@ -200,22 +216,34 @@
                     </Grid.RowDefinitions>
 
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="77"/>
-                        <ColumnDefinition Width="77"/>
-                        <ColumnDefinition Width="77"/>
-                        <ColumnDefinition Width="77"/>
-                        <ColumnDefinition Width="77"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
+                    <!-- Image of the navigation bar -->
                     <Image
-                        HorizontalOptions="Fill"
-                        Aspect="AspectFill"
+                        HorizontalOptions="FillAndExpand"
                         Grid.Row="1"
                         Grid.Column="0"
                         Grid.ColumnSpan="5"
                         Grid.RowSpan="5"
                         Margin="0"
-                        Source="NavigationBar.png"/>
+                        Source="NavigationBar.png"
+                        BackgroundColor="Transparent"/>
+
+                    <!-- Buttons on the navigation bar -->
+                    <Button
+                        BorderColor="Transparent"
+                        BackgroundColor="Transparent"
+                        WidthRequest="77"
+                        HeightRequest="20.6"
+                        Grid.Row="2"
+                        Grid.RowSpan="4"
+                        Grid.Column="0"
+                        />
 
                     <Button
                         BorderColor="Transparent"
@@ -224,16 +252,8 @@
                         HeightRequest="20.6"
                         Grid.Row="2"
                         Grid.RowSpan="4"
-                        Grid.Column="0"/>
-
-                    <Button
-                        BorderColor="Transparent"
-                        BackgroundColor="Transparent"
-                        WidthRequest="77"
-                        HeightRequest="20.6"
-                        Grid.Row="2"
-                        Grid.RowSpan="4"
-                        Grid.Column="1"/>
+                        Grid.Column="1"
+                        Clicked="PastReceipts"/>
 
                     <Button
                         BorderColor="Transparent"
@@ -242,7 +262,8 @@
                         HeightRequest="20.6"
                         Grid.Row="1"
                         Grid.RowSpan="4"
-                        Grid.Column="2"/>
+                        Grid.Column="2"
+                        Clicked="CreateForm"/>
 
                     <Button
                         BorderColor="Transparent"
@@ -251,7 +272,8 @@
                         HeightRequest="20.6"
                         Grid.Row="2"
                         Grid.RowSpan="4"
-                        Grid.Column="3"/>
+                        Grid.Column="3"
+                        Clicked="Attatchments"/>
 
                     <Button
                         BorderColor="Transparent"
@@ -260,10 +282,10 @@
                         HeightRequest="20.6"
                         Grid.Row="2"
                         Grid.RowSpan="4"
-                        Grid.Column="4"/>
+                        Grid.Column="4"
+                        Clicked="Profile"/>
                 </Grid>
             </FlexLayout>
-
-        </FlexLayout>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
