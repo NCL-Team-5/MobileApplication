@@ -294,7 +294,8 @@
                         HeightRequest="20.6"
                         Grid.Row="2"
                         Grid.RowSpan="4"
-                        Grid.Column="0"/>
+                        Grid.Column="0"
+                        Clicked="Home"/>
 
                     <Button
                         BorderColor="Transparent"
@@ -312,7 +313,8 @@
                         HeightRequest="20.6"
                         Grid.Row="1"
                         Grid.RowSpan="4"
-                        Grid.Column="2"/>
+                        Grid.Column="2"
+                        Clicked="CreateForm"/>
 
                     <Button
                         BorderColor="Transparent"
@@ -321,7 +323,8 @@
                         HeightRequest="20.6"
                         Grid.Row="2"
                         Grid.RowSpan="4"
-                        Grid.Column="3"/>
+                        Grid.Column="3"
+                        Clicked="Attatchments"/>
 
                     <Button
                         BorderColor="Transparent"
@@ -330,7 +333,8 @@
                         HeightRequest="20.6"
                         Grid.Row="2"
                         Grid.RowSpan="4"
-                        Grid.Column="4"/>
+                        Grid.Column="4"
+                        Clicked="Profile"/>
                 </Grid>
             </FlexLayout>
         </FlexLayout>

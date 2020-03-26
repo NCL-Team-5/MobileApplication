@@ -6,105 +6,8 @@
              mc:Ignorable="d"
              x:Class="SaggezzaApp.MainPage">
 
-
-    <!--<StackLayout 
-        BackgroundColor="#FFFFFFFF"
-        Padding="0">
-        
-        
-        <FlexLayout
-            BackgroundColor="#FFFFFFFF"
-            Padding="0"
-            VerticalOptions="End">
-            <Grid
-                Padding="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height = "Auto"/>
-                    <RowDefinition Height = "103"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
-
-                <Grid
-                    Grid.Row="5"
-                    Grid.Column="0">
-
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height = "20.6"/>
-                        <RowDefinition Height = "20.6"/>
-                        <RowDefinition Height = "20.6"/>
-                        <RowDefinition Height = "20.6"/>
-                        <RowDefinition Height = "20.6"/>
-                    </Grid.RowDefinitions>
-
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="77"/>
-                        <ColumnDefinition Width="77"/>
-                        <ColumnDefinition Width="77"/>
-                        <ColumnDefinition Width="77"/>
-                        <ColumnDefinition Width="77"/>
-                    </Grid.ColumnDefinitions>
-
-                    <Image
-                        HorizontalOptions="Fill"
-                        Aspect="AspectFill"
-                        Grid.Row="1"
-                        Grid.Column="0"
-                        Grid.ColumnSpan="5"
-                        Grid.RowSpan="5"
-                        Margin="0"
-                        Source="NavBar.png"/>
-
-                    <Button
-                        BorderColor="Transparent"
-                        BackgroundColor="Transparent"
-                        WidthRequest="77"
-                        HeightRequest="20.6"
-                        Grid.Row="1"
-                        Grid.RowSpan="4"
-                        Grid.Column="0"/>
-
-                    <Button
-                        BorderColor="Transparent"
-                        BackgroundColor="Transparent"
-                        WidthRequest="77"
-                        HeightRequest="20.6"
-                        Grid.Row="1"
-                        Grid.RowSpan="4"
-                        Grid.Column="1"/>
-
-                    <Button
-                        BorderColor="Transparent"
-                        BackgroundColor="Transparent"
-                        WidthRequest="77"
-                        HeightRequest="20.6"
-                        Grid.Row="0"
-                        Grid.RowSpan="4"
-                        Grid.Column="2"/>
-
-                    <Button
-                        BorderColor="Transparent"
-                        BackgroundColor="Transparent"
-                        WidthRequest="77"
-                        HeightRequest="20.6"
-                        Grid.Row="1"
-                        Grid.RowSpan="4"
-                        Grid.Column="3"/>
-
-                    <Button
-                        BorderColor="Transparent"
-                        BackgroundColor="Transparent"
-                        WidthRequest="77"
-                        HeightRequest="20.6"
-                        Grid.Row="1"
-                        Grid.RowSpan="4"
-                        Grid.Column="4"/>
-                </Grid>
-            </Grid>
-        </FlexLayout>!-->
-        
-        <!--<Grid 
+    <StackLayout>
+        <Grid 
         Padding="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height = "20"/>
@@ -162,5 +65,5 @@
             HorizontalOptions="Center"/>
 
         </Grid>
-    </StackLayout>!-->
+    </StackLayout>
 </ContentPage>

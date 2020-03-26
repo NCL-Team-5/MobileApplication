@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SaggezzaApp.HelpPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content
+        >
+        <ScrollView>
+            <StackLayout 
+                BackgroundColor="#FFFFFFFF">
+                <Grid 
+            Padding="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height = "50"/>
+                        <RowDefinition Height = "50"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="5"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                Aspect="AspectFill"
+                Grid.Column="0"
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Grid.ColumnSpan="5"
+                Source="SaggezzaGreen.png"/>
+
+                    <Image
+                HorizontalOptions="Start"
+                AnchorX="5"
+                Grid.Row="1"
+                Grid.Column="1"
+                Source="logo_saggezza.png"/>
+
+                    <Image
+                HorizontalOptions="End"
+                Grid.Row="1"
+                Grid.Column="3"
+                Source="VectorCog.png"/>
+
+                    <Label
+                HorizontalOptions="Center"
+                Grid.Column="2"
+                Grid.Row="1"
+                Text="Help" 
+                FontFamily="DINNextLTPro#400" 
+                FontSize="25" 
+                FontAttributes="None" 
+                TextColor="#FFFFFFFF"/>
+
+                </Grid>
+
+                <!-- CREATE FORMS -->
+                <Frame
+                    Margin="10"
+                    BackgroundColor="#FFFFFFF"
+                    BorderColor="#E5E5E5"
+                    Padding="10">
+                    <FlexLayout Direction="Column">
+                        <Image HorizontalOptions="Start"
+                            Source="CreateFormSS.png"/>
+                        <Label
+                            FontFamily="DINNextLTPro#400"
+                            FontSize="20"
+                            Text="1: Date expense took place"/>
+
+                        <Label
+                            FontFamily="DINNextLTPro#400"
+                            FontSize="20"
+                            Text="2: Do you have a physical receipt"/>
+
+                        <Label
+                            FontFamily="DINNextLTPro#400"
+                            FontSize="20"
+                            Text="3: Description of the claim"/>
+
+                        <Label
+                            FontFamily="DINNextLTPro#400"
+                            FontSize="20"
+                            Text="4: Claim catagory - select from a list fo dropdown options"/>
+
+                        <Label
+                            FontFamily="DINNextLTPro#400"
+                            FontSize="20"
+                            Text="5: In house or client related"/>
+
+                        <Label
+                            FontFamily="DINNextLTPro#400"
+                            FontSize="20"
+                            Text="6: Name of project claim is related to"/>
+
+                        <Label
+                            FontFamily="DINNextLTPro#400"
+                            FontSize="20"
+                            Text="7: Chargable to client tick box"/>
+
+                        <Label
+                            FontFamily="DINNextLTPro#400"
+                            FontSize="20"
+                            Text="8: Payment method - select from a dropdown options"/>
+
+                        <Label
+                            FontFamily="DINNextLTPro#400"
+                            FontSize="20"
+                            Text="9: Navigation Bar"/>
+
+                        <Label
+                            FontFamily="DINNextLTPro#400"
+                            FontSize="20"
+                            Text="10: Settings leading to log out"/>
+                    </FlexLayout>
+                </Frame>
+
+                <!-- HOME PAGE -->
+                <Frame
+                    Margin="10"
+                    BackgroundColor="#FFFFFFF"
+                    BorderColor="#E5E5E5"
+                    Padding="10">
+                    <FlexLayout Direction="Column">
+                        <Image HorizontalOptions="Start"
+                            Source="HomePageSS.png"/>
+                        <Label
+                            FontFamily="DINNextLTPro#400"
+                            FontSize="20"
+                            Text="1: Notifications and updates on your claims"/>
+
+                        <Label
+                            FontFamily="DINNextLTPro#400"
+                            FontSize="20"
+                            Text="2: List of pending claims"/>
+
+                        <Label
+                            FontFamily="DINNextLTPro#400"
+                            FontSize="20"
+                            Text="3: Navigation Bar"/>
+
+                        <Label
+                            FontFamily="DINNextLTPro#400"
+                            FontSize="20"
+                            Text="4: Navigate to settings"/>
+                    </FlexLayout>
+                </Frame>
+
+                <Frame
+                    Margin="10"
+                    BackgroundColor="#FFFFFFF"
+                    BorderColor="#E5E5E5"
+                    Padding="10">
+                    <FlexLayout Direction="Column">
+                        <Image HorizontalOptions="Start"
+                            Source="PastReceiptsSS.png"/>
+                        <Label
+                            FontFamily="DINNextLTPro#400"
+                            FontSize="20"
+                            Text="1: Order your claims"/>
+
+                        <Label
+                            FontFamily="DINNextLTPro#400"
+                            FontSize="20"
+                            Text="2: List of past claims"/>
+
+                        <Label
+                            FontFamily="DINNextLTPro#400"
+                            FontSize="20"
+                            Text="3: Navigation bar"/>
+
+                        <Label
+                            FontFamily="DINNextLTPro#400"
+                            FontSize="20"
+                            Text="4: Navigate to settings"/>
+                    </FlexLayout>
+                </Frame>
+
+                <Frame
+                    Margin="10"
+                    BackgroundColor="#FFFFFFF"
+                    BorderColor="#E5E5E5"
+                    Padding="10">
+                    <FlexLayout Direction="Column">
+                        <Image HorizontalOptions="Start"
+                            Source="ProfileSS.png"/>
+                        <Label
+                            FontFamily="DINNextLTPro#400"
+                            FontSize="20"
+                            Text="1: Your details in Saggezza"/>
+
+                        <Label
+                            FontFamily="DINNextLTPro#400"
+                            FontSize="20"
+                            Text="2: Navigation bar"/>
+
+                        <Label
+                            FontFamily="DINNextLTPro#400"
+                            FontSize="20"
+                            Text="3: Navigate to settings"/>
+                    </FlexLayout>
+                </Frame>
+
+                <Button Text="Back to Home"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="Center"
+                        Clicked="Home"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
