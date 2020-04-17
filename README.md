@@ -30,3 +30,5 @@ Right Click on SaggezzaApp (master) folder -> Manage NuGet packages and install 
 Make sure you give the app permissions to access storage (so it can access camera gallery) this may need to be done in settings if you're not prompted in app
 
 **Also find the Google-Services.json file in the SaggezzaApp.Android project, right click on it, go to Build Action and make sure GoogleServicesJson is selected.**
+
+The iOS version builds with errors but the Android version is fine
