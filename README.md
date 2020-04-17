@@ -6,7 +6,7 @@
 
 <b>Mac:</b> Select SaggezzaApp.Android folder, click Project tab in the menu bar -> SaggezzaApp.Android Options -> Android Build -> Check Enable Multi-Dex
 
-**If you get this error "INSTALL_FAILED_INVALID_APK: Package couldn't be installed base.apk code is missing" then un-enable Multi-Dex and change the Dex compiler to d8 (on the same settings page), Visual Studio update broke the app**
+**If you get this error "INSTALL_FAILED_INVALID_APK: Package couldn't be installed base.apk code is missing" or "Error: Compilation can't be completed because some library classes are missing." then you will need to disable Multi-Dex and change the Dex compiler to d8 (on the same settings page), Visual Studio update broke the app**
 
 <h3>Install Packages</h3>
 
