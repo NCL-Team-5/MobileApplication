@@ -64,9 +64,10 @@
 
             </Grid>
 
-                <!--WELCOME JOHN-->
+                <!--WELCOME TEXT-->
             <Label
-             Text="Welcome John..."
+             x:Name="WelcomeText"
+             Text=""
              FontFamily="DINNextLTPro#400"
              FontSize="24"
              FontAttributes="None"

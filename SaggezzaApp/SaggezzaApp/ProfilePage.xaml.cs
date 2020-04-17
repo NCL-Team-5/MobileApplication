@@ -7,30 +7,44 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+//TODO: Comments
+
 namespace SaggezzaApp {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProfilePage : ContentPage {
-        public ProfilePage() {
+
+        public UserData user;
+
+        public ProfilePage(UserData _user)
+        {
             InitializeComponent();
+            user = _user;
+            UpdateData();
+        }
+
+        public void UpdateData()
+        {
+            NameLabel.Text = user.Name;
+            IDLabel.Text = user.Id;
         }
 
         private async void PastReceipts(object sender, EventArgs e) {
-            var page = new PastReceipts();
+            var page = new PastReceipts(user);
             await Navigation.PushAsync(page);
         }
 
         private async void CreateForm(object sender, EventArgs e) {
-            var page = new CreateForm();
+            var page = new CreateForm(user);
             await Navigation.PushAsync(page);
         }
 
         private async void Attatchments(object sender, EventArgs e) {
-            var page = new Attatchments();
+            var page = new Attatchments(user);
             await Navigation.PushAsync(page);
         }
 
         private async void Home(object sender, EventArgs e) {
-            var page = new HomePage();
+            var page = new HomePage(user);
             await Navigation.PushAsync(page);
         }
 

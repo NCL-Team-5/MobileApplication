@@ -10,8 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace SaggezzaApp {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Attatchments : ContentPage {
-        public Attatchments() {
+        public UserData user;
+
+        public Attatchments(UserData _user) {
             InitializeComponent();
+            user = _user;
         }
     }
 }

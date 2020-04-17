@@ -16,6 +16,8 @@ namespace SaggezzaApp {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CreateForm : ContentPage {
 
+        public UserData user;
+
         public DateTime DateValue;
 
         public String ReceiptPic;
@@ -32,7 +34,7 @@ namespace SaggezzaApp {
 
         public bool BillableToClientValue;
 
-        //        public string UserID
+        public string UserID;
 
         public decimal AmountValue;
 
@@ -51,8 +53,9 @@ namespace SaggezzaApp {
               .Select(s => s[random.Next(s.Length)]).ToArray());
         }
 
-        public CreateForm() {
+        public CreateForm(UserData _user) {
             InitializeComponent();
+            user = _user;
         }
 
         // Executed when submit button is pressed
@@ -101,24 +104,27 @@ namespace SaggezzaApp {
                 Amount = AmountValue,
                 Currency = CurrencyValue,
                 Status = "Pending",
+                UserID = user.Id,
             };
 
             // Add new document to Firestore
             CrossCloudFirestore.Current
                                 .Instance
                                 .GetCollection("reports")
-                                .AddDocument(report, (error) =>
+                                .AddDocument(report, async (error) =>
                                 {
                                     if (error != null)
                                     {
                                         // Display alert if document not successfully added to Firestore
                                         System.Diagnostics.Debug.WriteLine(error);
-                                        DisplayAlert("Error", "Expense report not submitted, please try again", "OK");
+                                        await DisplayAlert("Error", "Expense report not submitted, please try again", "OK");
                                     } else
                                     {
                                         // Local Notification if document successfully added to Firestore, go to Home Page
-                                        CrossLocalNotifications.Current.Show("Expense Report Submitted Successfully", "You will be notified when its status changed");
-                                        // TODO: Go to Home Page
+                                        // CrossLocalNotifications.Current.Show("Expense Report Submitted Successfully", "You will be notified when its status changed");
+                                        await DisplayAlert("Success", "Expense report submitted successfully", "OK");
+                                        var page = new HomePage(user);
+                                        await Navigation.PushAsync(page);
                                     };
                                 });
         }

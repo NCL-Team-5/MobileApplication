@@ -118,7 +118,8 @@
                             TextColor="#FF000000"/>
 
                             <Label
-                            Text="John Smith" 
+                            x:Name="NameLabel"
+                            Text="" 
                             FontFamily="DINNextLTPro#400" 
                             FontSize="20" 
                             FontAttributes="None" 
@@ -127,14 +128,15 @@
 
                         <FlexLayout>
                             <Label
-                            Text="ID Number:   19875983" 
+                            Text="ID Number:   "
                             FontFamily="DINNextLTPro#400" 
                             FontSize="20" 
                             FontAttributes="None" 
                             TextColor="#FF000000"/>
 
                             <Label
-                            Text="19875983" 
+                            x:Name="IDLabel"
+                            Text="" 
                             FontFamily="DINNextLTPro#400" 
                             FontSize="20" 
                             FontAttributes="None" 
@@ -150,7 +152,7 @@
                             TextColor="#FF000000"/>
 
                             <Label
-                            Text="Software Development" 
+                            Text="" 
                             FontFamily="DINNextLTPro#400" 
                             FontSize="20" 
                             FontAttributes="None" 

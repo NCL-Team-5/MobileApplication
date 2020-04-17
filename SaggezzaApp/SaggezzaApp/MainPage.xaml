@@ -64,6 +64,16 @@
             Grid.Column="2"
             HorizontalOptions="Center"/>
 
+            <ImageButton
+            x:Name="signinbtn"
+            Source="googlesigninlight.png"
+            HorizontalOptions="Center"
+            Grid.Row="3"
+            Grid.Column="2"
+            VerticalOptions="CenterAndExpand"
+            Clicked="SignInBtn"
+            />
+
         </Grid>
     </StackLayout>
 </ContentPage>
