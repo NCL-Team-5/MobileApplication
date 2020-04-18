@@ -4,7 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="SaggezzaApp.SettingsPage">
+             x:Class="SaggezzaApp.SettingsPage"
+              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout 
         Orientation="Vertical"
@@ -69,6 +70,7 @@
 
                 <Button 
                     Text="Help"  
+                    Clicked="HelpClicked"
                     HeightRequest="65"
                     WidthRequest="130"
                     FontFamily="DINNextLTPro#400" 
@@ -94,14 +96,18 @@
                     BorderWidth="1.5"/>
             </FlexLayout>
 
+            <!-- Frame to push the nav bar to the bottom-->
             <Frame
                     VerticalOptions="FillAndExpand"
                     HorizontalOptions="FillAndExpand"
-                    BorderColor = "#FFFFFFFF"
+                    BorderColor = "Transparent"
                     BackgroundColor="#FFFFFFFF"/>
 
-            <FlexLayout VerticalOptions="End">
-                <Grid >
+            <!-- Navigation bar image and buttons -->
+            <FlexLayout VerticalOptions="End"
+                        HorizontalOptions="Fill">
+                <!-- grid which holds all the assets of the navigation bar-->
+                <Grid Padding="0" HorizontalOptions="Fill">
                     <Grid.RowDefinitions>
                         <RowDefinition Height = "Auto"/>
                         <RowDefinition Height = "20.6"/>
@@ -112,22 +118,35 @@
                     </Grid.RowDefinitions>
 
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="77"/>
-                        <ColumnDefinition Width="77"/>
-                        <ColumnDefinition Width="77"/>
-                        <ColumnDefinition Width="77"/>
-                        <ColumnDefinition Width="77"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
+                    <!-- Image of the navigation bar -->
                     <Image
-                        HorizontalOptions="Fill"
-                        Aspect="AspectFill"
+                        HorizontalOptions="FillAndExpand"
                         Grid.Row="1"
                         Grid.Column="0"
                         Grid.ColumnSpan="5"
                         Grid.RowSpan="5"
                         Margin="0"
-                        Source="NavigationBar.png"/>
+                        Source="NavigationBar.png"
+                        BackgroundColor="Transparent"/>
+
+                    <!-- Buttons on the navigation bar -->
+                    <Button
+                        BorderColor="Transparent"
+                        BackgroundColor="Transparent"
+                        WidthRequest="77"
+                        HeightRequest="20.6"
+                        Grid.Row="2"
+                        Grid.RowSpan="4"
+                        Grid.Column="0"
+                        Clicked="Home"
+                        />
 
                     <Button
                         BorderColor="Transparent"
@@ -136,16 +155,8 @@
                         HeightRequest="20.6"
                         Grid.Row="2"
                         Grid.RowSpan="4"
-                        Grid.Column="0"/>
-
-                    <Button
-                        BorderColor="Transparent"
-                        BackgroundColor="Transparent"
-                        WidthRequest="77"
-                        HeightRequest="20.6"
-                        Grid.Row="2"
-                        Grid.RowSpan="4"
-                        Grid.Column="1"/>
+                        Grid.Column="1"
+                        Clicked="PastReceipts"/>
 
                     <Button
                         BorderColor="Transparent"
@@ -154,7 +165,8 @@
                         HeightRequest="20.6"
                         Grid.Row="1"
                         Grid.RowSpan="4"
-                        Grid.Column="2"/>
+                        Grid.Column="2"
+                        Clicked="CreateForm"/>
 
                     <Button
                         BorderColor="Transparent"
@@ -163,7 +175,8 @@
                         HeightRequest="20.6"
                         Grid.Row="2"
                         Grid.RowSpan="4"
-                        Grid.Column="3"/>
+                        Grid.Column="3"
+                        Clicked="Attatchments"/>
 
                     <Button
                         BorderColor="Transparent"
@@ -172,7 +185,8 @@
                         HeightRequest="20.6"
                         Grid.Row="2"
                         Grid.RowSpan="4"
-                        Grid.Column="4"/>
+                        Grid.Column="4"
+                        Clicked="Profile"/>
                 </Grid>
             </FlexLayout>
 

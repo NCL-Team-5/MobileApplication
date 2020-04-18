@@ -4,262 +4,144 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="SaggezzaApp.PastReceipts">
+             x:Class="SaggezzaApp.PastReceipts"
+              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
-        <FlexLayout>
-            <FlexLayout>
-            <Grid
+        <!-- Top banner for all pages-->
+        <StackLayout Padding="0" Margin="0">
+            <Grid 
             Padding="0">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height = "20"/>
+                    <RowDefinition Height = "50"/>
                     <RowDefinition Height = "50"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="5"/>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="5"/>
                 </Grid.ColumnDefinitions>
+
+                <!--Green bacground for the top bar -->
+                <Image 
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Aspect="AspectFill"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Grid.RowSpan="2"
+                    Grid.ColumnSpan="5"
+                    Source="SaggezzaGreen.png"/>
+
+                <!-- Saggezza logo-->
                 <Image
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="FillAndExpand"
-                Aspect="AspectFill"
-                Grid.Column="0"
-                Grid.Row="0"
-                Grid.RowSpan="2"
-                Grid.ColumnSpan="5"
-                Source="SaggezzaGreen.png"/>
-                <Image
-                HorizontalOptions="Start"
-                AnchorX="5"
-                Grid.Row="1"
-                Grid.Column="1"
-                Source="logo_saggezza.png"/>
-                <Image
-                HorizontalOptions="End"
-                Grid.Row="1"
-                Grid.Column="3"
-                Source="VectorCog.png"/>
+                    HorizontalOptions="Start"
+                    AnchorX="5"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Source="logo_saggezza.png"/>
+
+                <!-- Settings icon -->
+                <ImageButton
+                    BackgroundColor="Transparent"
+                    BorderColor="Transparent"
+                    HorizontalOptions="End"
+                    Grid.Row="1"
+                    Grid.Column="3"
+                    Source="VectorCog.png"
+                    Clicked="Settings"/>
+
+                <!-- page title-->
                 <Label
-                HorizontalOptions="Center"
-                Grid.Column="2"
-                Grid.Row="1"
-                Text="Past Receipts"
-                FontFamily="DINNextLTPro#400"
-                FontSize="25"
-                FontAttributes="None"
-                TextColor="#FFFFFFFF"/>
+                    HorizontalOptions="Center"
+                    Grid.Column="2"
+                    Grid.Row="1"
+                    Text="Past Receipts" 
+                    FontFamily="DINNextLTPro#400" 
+                    FontSize="25" 
+                    FontAttributes="None" 
+                    TextColor="#FFFFFFFF"/>
+
             </Grid>
-            </FlexLayout>
-            <Label
-                Text="Descending Order"
-                HorizontalTextAlignment="End"
-                FontFamily="DINNextLTPro#400"/>
-            <Frame HasShadow="true">
+
+            <ScrollView BackgroundColor="Transparent">
+                
+            </ScrollView>
+            
+            <Frame
+                WidthRequest="315"
+                HeightRequest="200"
+                HasShadow="true"
+                BackgroundColor="#FFFFFFFF">
+
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height = "30"/>
+                        <RowDefinition Height = "45"/>
+                        <RowDefinition Height = "20"/>
+                        <RowDefinition Height = "40"/>
+                        <RowDefinition Height = "20"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="250"/>
-                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="300"/>
                     </Grid.ColumnDefinitions>
+                    <Image
+                 Grid.Column="0"
+                 Grid.Row="0"
+                 Source="Pending.png"/>
                     <Label
-                        Grid.Row="0"
-                        Grid.Column="0"
-                        HorizontalTextAlignment="Start"
-                        Text="#00169"
-                        FontFamily="DINNextLTPro#400"
-                        FontSize="20"
-                        FontAttributes="None"
-                        TextColor="#FF000000" />
+                 Grid.Column="1"
+                 Grid.Row="0"
+                Text="Pending Reciepts"
+                FontFamily="DINNextLTPro#400"
+                FontSize="20"
+                FontAttributes="None"
+                TextColor="#FF000000" />
+                    <Image
+                 Grid.Column="1"
+                 Grid.Row="1"
+                 Source="Vector.png"/>
+                    <Image
+                 Grid.Column="0"
+                 Grid.Row="2"
+                 Source="SpeakerPhone.png"/>
                     <Label
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        HorizontalTextAlignment="End"
-                        TextColor="#ffc107"
-                        FontSize="20"
-                        FontFamily="DINNextLTPro#400"
-                        Text="Pending"/>
-                </Grid>
-            </Frame>
-            <Frame HasShadow="true">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="250"/>
-                        <ColumnDefinition Width="Auto"/>
-                    </Grid.ColumnDefinitions>
+                 Grid.Column="1"
+                 Grid.Row="2"
+                 Text="Your receipt #00168 is waiting to be approved"
+                 FontFamily="DINNextLTPro#400"
+                 FontSize="12"
+                 FontAttributes="None"
+                 TextColor="#FF000000" />
+                    <Image
+                 Grid.Column="0"
+                 Grid.Row="4"
+                 Source="Speakerphone.png"/>
                     <Label
-                        Grid.Row="0"
-                        Grid.Column="0"
-                        HorizontalTextAlignment="Start"
-                        Text="#00168"
-                        FontFamily="DINNextLTPro#400"
-                        FontSize="20"
-                        FontAttributes="None"
-                        TextColor="#FF000000" />
-                    <Label
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        HorizontalTextAlignment="End"
-                        TextColor="#ffc107"
-                        FontSize="20"
-                        FontFamily="DINNextLTPro#400"
-                        Text="Pending"/>
-                </Grid>
-            </Frame>
-            <Frame HasShadow="true">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="250"/>
-                        <ColumnDefinition Width="Auto"/>
-                    </Grid.ColumnDefinitions>
-                    <Label
-                        Grid.Row="0"
-                        Grid.Column="0"
-                        Text="#00167"
-                        FontFamily="DINNextLTPro#400"
-                        FontSize="20"
-                        FontAttributes="None"
-                        TextColor="#FF000" />
-                    <Label
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        HorizontalTextAlignment="End"
-                        TextColor="#91d709"
-                        FontSize="20"
-                        FontFamily="DINNextLTPro#400"
-                        Text="Approved" />
-                </Grid>
-            </Frame>
-            <Frame HasShadow="true">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="250"/>
-                        <ColumnDefinition Width="Auto"/>
-                    </Grid.ColumnDefinitions>
-                    <Label
-                        Grid.Row="0"
-                        Grid.Column="0"
-                        HorizontalTextAlignment="Start"
-                        Text="#00166"
-                        FontFamily="DINNextLTPro#400"
-                        FontSize="20"
-                        FontAttributes="None"
-                        TextColor="#FF000000" />
-                    <Label
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        HorizontalTextAlignment="End"
-                        TextColor="#91d709"
-                        FontSize="20"
-                        FontFamily="DINNextLTPro#400"
-                        Text="Approved"/>
-                </Grid>
-            </Frame>
-            <Frame HasShadow="true">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="250"/>
-                        <ColumnDefinition Width="Auto"/>
-                    </Grid.ColumnDefinitions>
-                    <Label
-                        Grid.Row="0"
-                        Grid.Column="0"
-                        HorizontalTextAlignment="Start"
-                        Text="#00165"
-                        FontFamily="DINNextLTPro#400"
-                        FontSize="20"
-                        FontAttributes="None"
-                        TextColor="#FF000000" />
-                    <Label
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        HorizontalTextAlignment="End"
-                        TextColor="#ff3d00"
-                        FontSize="20"
-                        FontFamily="DINNextLTPro#400"
-                        Text="Declined"/>
-                </Grid>
-            </Frame>
-            <Frame HasShadow="true">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="250"/>
-                        <ColumnDefinition Width="Auto"/>
-                    </Grid.ColumnDefinitions>
-                    <Label
-                        Grid.Row="0"
-                        Grid.Column="0"
-                        HorizontalTextAlignment="Start"
-                        Text="#00164"
-                        FontFamily="DINNextLTPro#400"
-                        FontSize="20"
-                        FontAttributes="None"
-                        TextColor="#FF000000" />
-                    <Label
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        HorizontalTextAlignment="End"
-                        TextColor="#91d709"
-                        FontSize="20"
-                        FontFamily="DINNextLTPro#400"
-                        Text="Approved"/>
-                </Grid>
-            </Frame>
-            <Frame HasShadow="true">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="250"/>
-                        <ColumnDefinition Width="Auto"/>
-                    </Grid.ColumnDefinitions>
-                    <Label
-                        Grid.Row="0"
-                        Grid.Column="0"
-                        HorizontalTextAlignment="Start"
-                        Text="#00163"
-                        FontFamily="DINNextLTPro#400"
-                        FontSize="20"
-                        FontAttributes="None"
-                        TextColor="#FF000000" />
-                    <Label
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        HorizontalTextAlignment="End"
-                        TextColor="#91d709"
-                        FontSize="20"
-                        FontFamily="DINNextLTPro#400"
-                        Text="Approved"/>
+                 Grid.Row="4"
+                 Grid.Column="1"
+                 Text="Your receipt #00169 is waiting to be approved"
+                 FontFamily="DINNextLTPro#400"
+                 FontSize="12"
+                 FontAttributes="None"
+                 TextColor="#FF000000" />
                 </Grid>
             </Frame>
 
+            <!-- Frame to push the nav bar to the bottom-->
             <Frame
                     VerticalOptions="FillAndExpand"
                     HorizontalOptions="FillAndExpand"
-                    BorderColor = "#FFFFFFFF"
+                    BorderColor = "Transparent"
                     BackgroundColor="#FFFFFFFF"/>
 
-            <FlexLayout VerticalOptions="End">
-                <Grid >
+            <!-- Navigation bar image and buttons -->
+            <FlexLayout VerticalOptions="End"
+                        HorizontalOptions="Fill">
+                <!-- grid which holds all the assets of the navigation bar-->
+                <Grid Padding="0" HorizontalOptions="Fill">
                     <Grid.RowDefinitions>
                         <RowDefinition Height = "Auto"/>
                         <RowDefinition Height = "20.6"/>
@@ -270,23 +152,25 @@
                     </Grid.RowDefinitions>
 
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="77"/>
-                        <ColumnDefinition Width="77"/>
-                        <ColumnDefinition Width="77"/>
-                        <ColumnDefinition Width="77"/>
-                        <ColumnDefinition Width="77"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
+                    <!-- Image of the navigation bar -->
                     <Image
-                        HorizontalOptions="Fill"
-                        Aspect="AspectFill"
+                        HorizontalOptions="FillAndExpand"
                         Grid.Row="1"
                         Grid.Column="0"
                         Grid.ColumnSpan="5"
                         Grid.RowSpan="5"
                         Margin="0"
-                        Source="NavigationBar.png"/>
+                        Source="NavigationBar.png"
+                        BackgroundColor="Transparent"/>
 
+                    <!-- Buttons on the navigation bar -->
                     <Button
                         BorderColor="Transparent"
                         BackgroundColor="Transparent"
@@ -295,7 +179,8 @@
                         Grid.Row="2"
                         Grid.RowSpan="4"
                         Grid.Column="0"
-                        Clicked="Home"/>
+                        Clicked="Home"
+                        />
 
                     <Button
                         BorderColor="Transparent"
@@ -304,7 +189,8 @@
                         HeightRequest="20.6"
                         Grid.Row="2"
                         Grid.RowSpan="4"
-                        Grid.Column="1"/>
+                        Grid.Column="1"
+                        />
 
                     <Button
                         BorderColor="Transparent"
@@ -337,6 +223,6 @@
                         Clicked="Profile"/>
                 </Grid>
             </FlexLayout>
-        </FlexLayout>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

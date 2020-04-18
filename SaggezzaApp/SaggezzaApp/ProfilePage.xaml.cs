@@ -14,6 +14,11 @@ namespace SaggezzaApp {
             InitializeComponent();
         }
 
+        private async void Settings(object sender, EventArgs e) {
+            var page = new SettingsPage();
+            await Navigation.PushAsync(page);
+        }
+
         private async void PastReceipts(object sender, EventArgs e) {
             var page = new PastReceipts();
             await Navigation.PushAsync(page);
