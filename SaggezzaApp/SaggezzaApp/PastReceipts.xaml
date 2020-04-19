@@ -18,7 +18,7 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="5"/>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="5"/>
                 </Grid.ColumnDefinitions>
@@ -66,69 +66,11 @@
             </Grid>
 
             <ScrollView BackgroundColor="Transparent">
+                <!-- past receipts would be added here !-->
                 
             </ScrollView>
             
-            <Frame
-                WidthRequest="315"
-                HeightRequest="200"
-                HasShadow="true"
-                BackgroundColor="#FFFFFFFF">
-
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height = "30"/>
-                        <RowDefinition Height = "45"/>
-                        <RowDefinition Height = "20"/>
-                        <RowDefinition Height = "40"/>
-                        <RowDefinition Height = "20"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="30"/>
-                        <ColumnDefinition Width="300"/>
-                    </Grid.ColumnDefinitions>
-                    <Image
-                 Grid.Column="0"
-                 Grid.Row="0"
-                 Source="Pending.png"/>
-                    <Label
-                 Grid.Column="1"
-                 Grid.Row="0"
-                Text="Pending Reciepts"
-                FontFamily="DINNextLTPro#400"
-                FontSize="20"
-                FontAttributes="None"
-                TextColor="#FF000000" />
-                    <Image
-                 Grid.Column="1"
-                 Grid.Row="1"
-                 Source="Vector.png"/>
-                    <Image
-                 Grid.Column="0"
-                 Grid.Row="2"
-                 Source="SpeakerPhone.png"/>
-                    <Label
-                 Grid.Column="1"
-                 Grid.Row="2"
-                 Text="Your receipt #00168 is waiting to be approved"
-                 FontFamily="DINNextLTPro#400"
-                 FontSize="12"
-                 FontAttributes="None"
-                 TextColor="#FF000000" />
-                    <Image
-                 Grid.Column="0"
-                 Grid.Row="4"
-                 Source="Speakerphone.png"/>
-                    <Label
-                 Grid.Row="4"
-                 Grid.Column="1"
-                 Text="Your receipt #00169 is waiting to be approved"
-                 FontFamily="DINNextLTPro#400"
-                 FontSize="12"
-                 FontAttributes="None"
-                 TextColor="#FF000000" />
-                </Grid>
-            </Frame>
+          
 
             <!-- Frame to push the nav bar to the bottom-->
             <Frame
