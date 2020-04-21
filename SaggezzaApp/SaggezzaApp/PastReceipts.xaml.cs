@@ -17,6 +17,11 @@ namespace SaggezzaApp {
             user = _user;
         }
 
+        private async void Settings(object sender, EventArgs e) {
+            var page = new SettingsPage();
+            await Navigation.PushAsync(page);
+        }
+
         private async void Home(object sender, EventArgs e) {
             var page = new HomePage(user);
             await Navigation.PushAsync(page);

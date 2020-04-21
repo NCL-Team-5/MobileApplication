@@ -22,6 +22,11 @@ namespace SaggezzaApp {
             UpdateData();
         }
 
+        private async void Settings(object sender, EventArgs e) {
+            var page = new SettingsPage();
+            await Navigation.PushAsync(page);
+        }
+
         public void UpdateData()
         {
             WelcomeText.Text = "Welcome " + user.GivenName;

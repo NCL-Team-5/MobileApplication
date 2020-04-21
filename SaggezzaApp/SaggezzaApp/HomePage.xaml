@@ -45,11 +45,14 @@
                     Source="logo_saggezza.png"/>
 
                 <!-- Settings icon -->
-                <Image
+                <ImageButton
+                    BackgroundColor="Transparent"
+                    BorderColor="Transparent"
                     HorizontalOptions="End"
                     Grid.Row="1"
                     Grid.Column="3"
-                    Source="VectorCog.png"/>
+                    Source="VectorCog.png"
+                    Clicked="Settings"/>
 
                 <!-- page title-->
                 <Label
