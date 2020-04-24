@@ -1,6 +1,7 @@
 ﻿using System;
 namespace SaggezzaApp
 {
+    // User's info is store as UserData object
     public class UserData
     {
         public string Id { get; set; }
