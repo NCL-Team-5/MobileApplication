@@ -13,21 +13,22 @@ using Xamarin.Forms.Xaml;
 namespace SaggezzaApp {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HomePage : ContentPage {
-
+        
+        // Get logged in user's data
         public UserData user;
-
         public HomePage(UserData _user) {
             InitializeComponent();
             user = _user;
             UpdateData();
         }
 
+        // Show user's name on home page with welcome message
         public void UpdateData()
         {
             WelcomeText.Text = "Welcome " + user.GivenName;
         }
 
-
+        // Navigation, push user details to each page
         private async void PastReceipts(object sender, EventArgs e) {
             var page = new PastReceipts(user);
             await Navigation.PushAsync(page);
