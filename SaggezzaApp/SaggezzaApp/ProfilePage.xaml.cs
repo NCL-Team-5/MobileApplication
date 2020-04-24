@@ -12,9 +12,9 @@ using Xamarin.Forms.Xaml;
 namespace SaggezzaApp {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProfilePage : ContentPage {
-
+    
+        // Getuser data
         public UserData user;
-
         public ProfilePage(UserData _user)
         {
             InitializeComponent();
@@ -22,12 +22,14 @@ namespace SaggezzaApp {
             UpdateData();
         }
 
+        // Update page with user data
         public void UpdateData()
         {
             NameLabel.Text = user.Name;
             IDLabel.Text = user.Id;
         }
 
+        // Navigation
         private async void PastReceipts(object sender, EventArgs e) {
             var page = new PastReceipts(user);
             await Navigation.PushAsync(page);
