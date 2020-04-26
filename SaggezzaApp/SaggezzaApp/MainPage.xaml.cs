@@ -27,15 +27,17 @@ namespace SaggezzaApp
 
         private readonly IGoogleClientManager _googleClientManager;
         public event PropertyChangedEventHandler PropertyChanged;
-
+        
+        // Sign in button pressed
         public void SignInBtn(object sender, EventArgs e)
         {
             UserLoginAsync();
         }
 
+        // Login function
         public async void UserLoginAsync()
         {
-
+            // Initialize google login client, go to OnLoginCompleted is login is successful otherwise catch errors
             CrossGoogleClient.Current.OnLogin += OnLoginCompleted;
                 try
                 {
@@ -83,10 +85,11 @@ namespace SaggezzaApp
             //await Navigation.PushAsync(page);
             //await DisplayAlert("a", "b", "c");
         }
-
+        
+        // Login successful function
         private async void OnLoginCompleted(object sender, GoogleClientResultEventArgs<GoogleUser> loginEventArgs)
         {
-
+            // Create UserData obj from user data
             GoogleUser googleUser = loginEventArgs.Data;
             var user = new UserData
             {
@@ -96,6 +99,7 @@ namespace SaggezzaApp
                 FamilyName = googleUser.FamilyName,
                 Email = googleUser.Email,
             };
+            // Go to home page
             var page = new HomePage(user);
             await Navigation.PushAsync(page);
             CrossGoogleClient.Current.OnLogin -= OnLoginCompleted;

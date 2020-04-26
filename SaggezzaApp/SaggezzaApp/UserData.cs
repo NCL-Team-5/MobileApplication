@@ -7,6 +7,7 @@ namespace SaggezzaApp
         Release Date: 03/03/2020
         Last editied: 10/04/2020
     */
+    // User's info is store as UserData object
     public class UserData
     {
         public string Id { get; set; }
@@ -14,7 +15,6 @@ namespace SaggezzaApp
         public string GivenName { get; set; }
         public string FamilyName { get; set; }
         public string Email { get; set; }
-        
+
     }
 }
-
