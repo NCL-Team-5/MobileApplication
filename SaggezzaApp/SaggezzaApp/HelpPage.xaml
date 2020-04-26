@@ -6,6 +6,15 @@
              mc:Ignorable="d"
              x:Class="SaggezzaApp.HelpPage"
              NavigationPage.HasNavigationBar="False">
+
+    <!--
+    Description: This page holds the xaml code for the Help page. 
+                    It has a series of screen shots of the app and descriptions of parts of the app with how to use it.
+    Authors:Rachel Swift
+    Release Date: 7/02/2020
+    Last editied: 16/04/2020
+ --> 
+    
     <ContentPage.Content
         >
         <ScrollView>
@@ -33,7 +42,7 @@
                 Grid.Row="0"
                 Grid.RowSpan="2"
                 Grid.ColumnSpan="5"
-                Source="SaggezzaGreen.png"/>
+                Sour0ce="SaggezzaGreen.png"/>
 
                     <Image
                 HorizontalOptions="Start"

@@ -1,6 +1,13 @@
 using System;
 namespace SaggezzaApp
 {
+
+    /*
+        Description: This page holds the C# code for viewign the expense report
+        Authors:Cameron Chrisholm
+        Release Date: 03/03/2020
+        Last editied: 10/04/2020
+    */
     public class ExpenseReportViewModel
     {
 

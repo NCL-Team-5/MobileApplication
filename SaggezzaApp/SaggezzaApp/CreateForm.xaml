@@ -6,6 +6,15 @@
              mc:Ignorable="d"
              x:Class="SaggezzaApp.CreateForm"
               NavigationPage.HasNavigationBar="False">
+
+    <!--
+    Description: This page holds the xaml code for the create form.
+                    It allows users to make expensive claims after inputting the necessary data
+    Authors: Rosie Gudeon
+    Release Date: 7/02/2020
+    Last editied: 19/03/2020
+ -->
+    
     <ContentPage.Content>
     <ScrollView>
         <StackLayout>

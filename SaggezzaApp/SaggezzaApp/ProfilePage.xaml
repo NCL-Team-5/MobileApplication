@@ -8,6 +8,12 @@
              NavigationPage.HasNavigationBar="False">
             <!-- Removing navigation bar from the top of the screen-->
 
+    <!--
+    Description: This page holds the xaml code for the Profile page
+    Authors: Rosie Gudeon, Rachel Swift
+    Release Date: 7/02/2020
+    Last editied: 26/03/2020
+ -->
     <ContentPage.Content>
         <StackLayout 
             

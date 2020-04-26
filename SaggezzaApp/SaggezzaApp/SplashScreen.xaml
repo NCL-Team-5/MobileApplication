@@ -5,6 +5,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="SaggezzaApp.SplashScreen">
+
+    <!--
+    Description: This page holds the xaml code for the spash screen which appears at the start up on the application
+    Authors: Rosie Gudeon
+    Release Date: 7/02/2020
+    Last editied: 27/02/2020
+ -->
+    
     <ContentPage.Content>
         <FlexLayout>
             

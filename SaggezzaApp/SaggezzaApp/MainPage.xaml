@@ -5,6 +5,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="SaggezzaApp.MainPage">
+    <!--
+    Description: This page holds the xaml code for the login screen of the application
+    Authors: Rachel Swift
+    Release Date: 7/02/2020
+    Last editied: 23/03/2020
+ -->
+
 
     <StackLayout>
         <Grid 

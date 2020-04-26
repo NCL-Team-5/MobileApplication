@@ -6,7 +6,13 @@
              mc:Ignorable="d"
              x:Class="SaggezzaApp.HomePage"
              NavigationPage.HasNavigationBar="False"> <!-- Removing navigation bar from the top of the screen-->
-    
+    <!--
+    Description: This page holds the xaml code for the Home Page. 
+                It shows claims that are still in processing and notifications of claims that have been approved or rejected
+    Authors: Joshia Tambunan, Rachel Swift
+    Release Date: 7/02/2020
+    Last editied: 26/03/2020
+ -->
     <!-- Start of page content-->
     <ContentPage.Content>
         <!-- Top banner for all pages-->

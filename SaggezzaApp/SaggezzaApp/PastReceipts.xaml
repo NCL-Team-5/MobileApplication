@@ -6,6 +6,13 @@
              mc:Ignorable="d"
              x:Class="SaggezzaApp.PastReceipts"
               NavigationPage.HasNavigationBar="False">
+    <!--
+    Description: This page holds the xaml code for the past receipts. 
+                It will show a list of the the previous claims made by the logged in user
+    Authors:Rosie Gudeon, Rachel Swift
+    Release Date: 7/02/2020
+    Last editied: 17/04/2020
+ -->
     <ContentPage.Content>
         <!-- Top banner for all pages-->
         <StackLayout Padding="0" Margin="0">
